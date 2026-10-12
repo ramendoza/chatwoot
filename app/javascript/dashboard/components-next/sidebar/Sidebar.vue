@@ -50,9 +50,9 @@ const store = useStore();
 
 // Calls run on the enterprise-only API (cloud runs enterprise); hide the entry
 // on community so it doesn't lead to a dashboard/CTA the backend can't serve.
-const isCallsAvailable = computed(
-  () => isOnChatwootCloud.value || isEnterprise
-);
+// const isCallsAvailable = computed(
+// () => isOnChatwootCloud.value || isEnterprise
+// );
 const searchShortcut = useKbd([`$mod`, 'k']);
 const { t } = useI18n();
 
@@ -590,17 +590,17 @@ const menuItems = computed(() => {
     //     },
     //   ],
     // },
-    ...(isCallsAvailable.value
-      ? [
-          {
-            name: 'Calls',
-            label: t('SIDEBAR.CALLS'),
-            icon: 'i-lucide-phone',
-            to: accountScopedRoute('calls_dashboard_index'),
-            activeOn: ['calls_dashboard_index'],
-          },
-        ]
-      : []),
+    // ...(isCallsAvailable.value
+    // ? [
+    // {
+    // name: 'Calls',
+    // label: t('SIDEBAR.CALLS'),
+    // icon: 'i-lucide-phone',
+    // to: accountScopedRoute('calls_dashboard_index'),
+    // activeOn: ['calls_dashboard_index'],
+    // },
+    // ]
+    // : []),
     {
       name: 'Contacts',
       label: t('SIDEBAR.CONTACTS'),
