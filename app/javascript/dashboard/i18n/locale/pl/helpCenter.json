@@ -859,7 +859,7 @@
       "CONFIRM_BUTTON_LABEL": "Stwórz",
       "NAME": {
         "LABEL": "Imię",
-        "PLACEHOLDER": "User Guide | Chatwoot",
+        "PLACEHOLDER": "User Guide | ZiGuf",
         "MESSAGE": "Choose an name for your portal.",
         "ERROR": "Nazwa jest wymagana"
       },
@@ -982,7 +982,7 @@
         "HEADER": "Integracje",
         "DESCRIPTION": "Connect tools that extend what your help center can do.",
         "LIVE_CHAT": {
-          "TITLE": "Live chat with Chatwoot",
+          "TITLE": "Live chat with ZiGuf",
           "DESCRIPTION": "Show a live chat widget on your help center so visitors can reach you while they read.",
           "PLACEHOLDER": "Select live chat widget",
           "NONE_OPTION": "No widget"

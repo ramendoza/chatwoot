@@ -859,7 +859,7 @@
       "CONFIRM_BUTTON_LABEL": "Krijo",
       "NAME": {
         "LABEL": "Emri",
-        "PLACEHOLDER": "Udhëzuesi i Përdoruesit | Chatwoot",
+        "PLACEHOLDER": "Udhëzuesi i Përdoruesit | ZiGuf",
         "MESSAGE": "Zgjidh një emër për portalin tënd.",
         "ERROR": "Emri është i nevojshëm"
       },
@@ -982,7 +982,7 @@
         "HEADER": "Integrimet",
         "DESCRIPTION": "Connect tools that extend what your help center can do.",
         "LIVE_CHAT": {
-          "TITLE": "Live chat with Chatwoot",
+          "TITLE": "Live chat with ZiGuf",
           "DESCRIPTION": "Show a live chat widget on your help center so visitors can reach you while they read.",
           "PLACEHOLDER": "Select live chat widget",
           "NONE_OPTION": "No widget"

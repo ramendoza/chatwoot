@@ -13,5 +13,6 @@ export default defineConfig({
       },
     },
   },
+  server: { allowedHosts: ['vite'], watch: { usePolling: true, interval: 500 } },
   resolve: { alias: aliases },
 });
