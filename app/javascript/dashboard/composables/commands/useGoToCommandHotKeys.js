@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router';
 import { usePolicy } from 'dashboard/composables/usePolicy';
 import {
   ICON_BLOCKS,
-  ICON_BOT,
+  // ICON_BOT,
   ICON_BRIEFCASE,
   ICON_CHART,
   ICON_CLOCK_ALERT,
@@ -135,20 +135,20 @@ const GO_TO_COMMANDS = [
     icon: ICON_SMILE,
     routeName: 'csat_reports',
   },
-  {
-    id: 'open_bot_reports',
-    title: 'COMMAND_BAR.COMMANDS.GO_TO_BOT_REPORTS',
-    section: SECTION_REPORTS,
-    icon: ICON_BOT,
-    routeName: 'bot_reports',
-  },
-  {
-    id: 'open_sla_reports',
-    title: 'COMMAND_BAR.COMMANDS.GO_TO_SLA_REPORTS',
-    section: SECTION_REPORTS,
-    icon: ICON_CLOCK_ALERT,
-    routeName: 'sla_reports',
-  },
+  // {
+  // id: 'open_bot_reports',
+  // title: 'COMMAND_BAR.COMMANDS.GO_TO_BOT_REPORTS',
+  // section: SECTION_REPORTS,
+  // icon: ICON_BOT,
+  // routeName: 'bot_reports',
+  // },
+  // {
+  // id: 'open_sla_reports',
+  // title: 'COMMAND_BAR.COMMANDS.GO_TO_SLA_REPORTS',
+  // section: SECTION_REPORTS,
+  // icon: ICON_CLOCK_ALERT,
+  // routeName: 'sla_reports',
+  // },
   {
     id: 'open_agent_settings',
     title: 'COMMAND_BAR.COMMANDS.GO_TO_SETTINGS_AGENTS',

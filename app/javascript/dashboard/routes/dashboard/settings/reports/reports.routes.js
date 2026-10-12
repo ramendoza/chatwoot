@@ -20,12 +20,12 @@ import InboxReports from './InboxReports.vue';
 import LabelReports from './LabelReports.vue';
 import TeamReports from './TeamReports.vue';
 
-import BotReports from './BotReports.vue';
+// import BotReports from './BotReports.vue';
 import CsatResponses from './CsatResponses.vue';
 import LiveReports from './LiveReports.vue';
 import MonitorShow from './monitors/MonitorShow.vue';
 import MonitorsIndex from './monitors/MonitorsIndex.vue';
-import SLAReports from './SLAReports.vue';
+// import SLAReports from './SLAReports.vue';
 
 const meta = {
   featureFlag: FEATURE_FLAGS.REPORTS,
@@ -155,24 +155,24 @@ export default {
         },
         ...oldReportRoutes,
         ...revisedReportRoutes,
-        {
-          path: 'sla',
-          name: 'sla_reports',
-          meta,
-          component: SLAReports,
-        },
+        // {
+        // path: 'sla',
+        // name: 'sla_reports',
+        // meta,
+        // component: SLAReports,
+        // },
         {
           path: 'csat',
           name: 'csat_reports',
           meta,
           component: CsatResponses,
         },
-        {
-          path: 'bot',
-          name: 'bot_reports',
-          meta,
-          component: BotReports,
-        },
+        // {
+        // path: 'bot',
+        // name: 'bot_reports',
+        // meta,
+        // component: BotReports,
+        // },
       ],
     },
   ],
