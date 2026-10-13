@@ -3,9 +3,6 @@ import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { messageTimestamp } from 'shared/helpers/timeHelper';
 import { useExactTimestamp } from 'shared/composables/useExactTimestamp';
-import { useCampaignAnalytics } from 'dashboard/composables/useCampaignAnalytics';
-import { useAdmin } from 'dashboard/composables/useAdmin';
-import { useAccount } from 'dashboard/composables/useAccount';
 import Icon from 'next/icon/Icon.vue';
 import MessageStatus from './MessageStatus.vue';
 
@@ -13,9 +10,6 @@ const props = defineProps({
   recipient: { type: Object, required: true },
 });
 const { t } = useI18n();
-const { isAdmin } = useAdmin();
-const { canViewAnalytics } = useCampaignAnalytics();
-const { accountScopedRoute } = useAccount();
 const exactTimestamp = useExactTimestamp();
 const sentAt = computed(() =>
   messageTimestamp(props.recipient.sent_at, 'LLL d, h:mm a')
@@ -47,24 +41,7 @@ const statusLabel = computed(
           class="size-4 shrink-0"
         />
         <span class="sr-only">{{ t('CAMPAIGN.HISTORY.LABEL') }}</span>
-        <RouterLink
-          v-if="isAdmin && canViewAnalytics"
-          :to="
-            accountScopedRoute('campaigns_whatsapp_analytics', {
-              campaignId: recipient.campaign.id,
-            })
-          "
-          class="flex min-w-0 items-center gap-1 text-xs leading-5 text-inherit hover:underline focus-visible:underline"
-        >
-          <span class="min-w-0 break-words">{{
-            recipient.campaign.title
-          }}</span>
-          <Icon
-            icon="i-lucide-chevron-right"
-            class="size-4 shrink-0 rtl:rotate-180"
-          />
-        </RouterLink>
-        <span v-else class="min-w-0 break-words">
+        <span class="min-w-0 break-words">
           {{ recipient.campaign.title }}
         </span>
       </div>

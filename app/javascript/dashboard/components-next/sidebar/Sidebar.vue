@@ -738,16 +738,6 @@ const menuItems = computed(() => {
           label: t('SIDEBAR.LIVE_CHAT'),
           to: accountScopedRoute('campaigns_livechat_index'),
         },
-        {
-          name: 'SMS',
-          label: t('SIDEBAR.SMS'),
-          to: accountScopedRoute('campaigns_sms_index'),
-        },
-        {
-          name: 'WhatsApp',
-          label: t('SIDEBAR.WHATSAPP'),
-          to: accountScopedRoute('campaigns_whatsapp_index'),
-        },
       ],
     },
     {
@@ -1004,8 +994,8 @@ const menuItems = computed(() => {
           />
         </template>
         <template v-else>
-          <div class="grid flex-shrink-0 place-content-center size-6">
-            <Logo class="size-4" />
+          <div class="grid flex-shrink-0 place-content-center size-8">
+            <Logo class="size-7" />
           </div>
           <div class="flex-shrink-0 w-px h-3 bg-n-strong" />
           <SidebarAccountSwitcher
