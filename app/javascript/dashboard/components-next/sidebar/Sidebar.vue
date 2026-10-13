@@ -853,12 +853,12 @@ const menuItems = computed(() => {
           ],
           to: accountScopedRoute('settings_inbox_list'),
         },
-        {
-          name: 'Settings Templates',
-          label: t('SIDEBAR.WHATSAPP_TEMPLATES'),
-          icon: 'i-lucide-layout-template',
-          to: accountScopedRoute('settings_templates'),
-        },
+        // {
+        //   name: 'Settings Templates',
+        //   label: t('SIDEBAR.WHATSAPP_TEMPLATES'),
+        //   icon: 'i-lucide-layout-template',
+        //   to: accountScopedRoute('settings_templates'),
+        // },
         {
           name: 'Settings Labels',
           label: t('SIDEBAR.LABELS'),
@@ -895,12 +895,12 @@ const menuItems = computed(() => {
           icon: 'i-lucide-message-square-quote',
           to: accountScopedRoute('canned_list'),
         },
-        {
-          name: 'Settings Integrations',
-          label: t('SIDEBAR.INTEGRATIONS'),
-          icon: 'i-lucide-blocks',
-          to: accountScopedRoute('settings_applications'),
-        },
+        // {
+        //   name: 'Settings Integrations',
+        //   label: t('SIDEBAR.INTEGRATIONS'),
+        //   icon: 'i-lucide-blocks',
+        //   to: accountScopedRoute('settings_applications'),
+        // },
         ...(hasDataImport.value
           ? [
               {
@@ -935,12 +935,12 @@ const menuItems = computed(() => {
           icon: 'i-lucide-workflow',
           to: accountScopedRoute('conversation_workflow_index'),
         },
-        {
-          name: 'Settings Security',
-          label: t('SIDEBAR.SECURITY'),
-          icon: 'i-lucide-shield',
-          to: accountScopedRoute('security_settings_index'),
-        },
+        // {
+        //   name: 'Settings Security',
+        //   label: t('SIDEBAR.SECURITY'),
+        //   icon: 'i-lucide-shield',
+        //   to: accountScopedRoute('security_settings_index'),
+        // },
         {
           name: 'Settings Billing',
           label: t('SIDEBAR.BILLING'),
