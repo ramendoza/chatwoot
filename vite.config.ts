@@ -13,6 +13,25 @@ export default defineConfig({
       },
     },
   },
-  server: { allowedHosts: ['vite'], watch: { usePolling: true, interval: 500 } },
+  server: {
+    allowedHosts: ['vite'],
+    watch: {
+      usePolling: false,
+      interval: 500,
+      // Docker bind mounts are slow to poll; skip dirs Vite never serves
+      ignored: [
+        '**/tmp/**',
+        '**/log/**',
+        '**/public/**',
+        '**/spec/**',
+        '**/vendor/**',
+        '**/storage/**',
+        '**/coverage/**',
+        '**/db/**',
+        '**/swagger/**',
+        '**/docs/**',
+      ],
+    },
+  },
   resolve: { alias: aliases },
 });
