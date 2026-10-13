@@ -1,5 +1,17 @@
 #Files in the config/locales directory are used for internationalization
-#and are automatically loaded by Rails. If you want to use locales other
+      Transcripción de conversación de %{brand_name}
+
+      Canal: %{channel_info}
+      ID de conversación: %{display_id}
+      Ver en %{brand_name}: %{url}
+
+      Transcripción:
+      %{format_messages}
+
+      Canal: %{channel_info}
+      Creada: %{formatted_creation_time}
+      ID de conversación: %{display_id}
+      Ver en %{brand_name}: %{url}
 #than English, add the necessary files in this directory.
 #To use the locales, use `I18n.t`:
 #I18n.t 'hello'
@@ -20,18 +32,19 @@ es:
   hello: 'Hola mundo'
   inbox:
     reauthorization:
-      success: 'Channel reauthorized successfully'
-      not_required: 'Reauthorization is not required for this inbox'
-      invalid_channel: 'Invalid channel type for reauthorization'
+      success: 'Canal reautorizado correctamente'
+      not_required: 'No se requiere reautorización para esta bandeja de entrada'
+      invalid_channel: 'Tipo de canal no válido para la reautorización'
   auth:
     saml:
       invalid_email: 'Por favor, introduzca una dirección de correo válida'
-      authentication_failed: 'Authentication failed. Please check your credentials and try again.'
+      authentication_failed: 'Falló la autenticación. Verifica tus credenciales e inténtalo de nuevo.'
   messages:
-    reset_password: Request for password reset is successful. A email with instructions will be sent to your email if it exists.
-    reset_password_saml_user: This account uses SAML authentication. Password reset is not available. Please contact your administrator.
-    login_saml_user: This account uses SAML authentication. Please sign in through your organization's SAML provider.
-    saml_not_available: SAML authentication is not available in this installation.
+    reset_password: 'La solicitud de restablecimiento de contraseña se realizó correctamente. Si el correo existe, se enviará un mensaje con instrucciones a tu dirección de correo electrónico.'
+    reset_password_saml_user: 'Esta cuenta usa autenticación SAML. El restablecimiento de contraseña no está disponible. Contacta a tu administrador.'
+    login_saml_user: 'Esta cuenta usa autenticación SAML. Inicia sesión a través del proveedor SAML de tu organización.'
+    saml_not_available: 'La autenticación SAML no está disponible en esta instalación.'
+    mfa_sign_in_required: 'Tu cuenta requiere autenticación de dos factores. Inicia sesión para continuar.'
     inbox_deletetion_response: Su solicitud de eliminación de la bandeja de entrada será procesada en algún tiempo.
   data_imports:
     intercom:
@@ -62,9 +75,9 @@ es:
       not_authorized: No está autorizado a acceder a esta cuenta
       email_limit_exceeded: Se ha alcanzado el límite diario de correos electrónicos de esta cuenta
       reporting_timezone:
-        invalid: is not a valid timezone
+        invalid: 'no es una zona horaria válida'
       support_email:
-        invalid: is not a valid email address
+        invalid: 'no es una dirección de correo electrónico válida'
     validations:
       presence: no debe estar en blanco
     webhook:
@@ -79,22 +92,22 @@ es:
     voice:
       call_already_accepted: '%{agent_name} ya está gestionando la llamada.'
     assignment_policy:
-      not_found: Assignment policy not found
+      not_found: 'Política de asignación no encontrada'
     attachments:
-      invalid: Invalid attachment
+      invalid: 'Archivo adjunto no válido'
     upload:
-      missing_input: 'No file or URL provided'
-      invalid_url: 'Invalid URL provided'
-      fetch_failed: 'Failed to fetch file from URL'
-      fetch_failed_with_message: 'Failed to fetch file from URL: %{message}'
-      file_too_large: 'File exceeds the maximum allowed size'
-      unsupported_content_type: 'File type not supported (only images and videos are allowed)'
-      unexpected: 'An unexpected error occurred'
+      missing_input: 'No se proporcionó ningún archivo ni URL'
+      invalid_url: 'La URL proporcionada no es válida'
+      fetch_failed: 'No se pudo obtener el archivo desde la URL'
+      fetch_failed_with_message: 'No se pudo obtener el archivo desde la URL: %{message}'
+      file_too_large: 'El archivo supera el tamaño máximo permitido'
+      unsupported_content_type: 'Tipo de archivo no admitido (solo se permiten imágenes y videos)'
+      unexpected: 'Ocurrió un error inesperado'
     database:
       query_canceled: 'La solicitud tardó demasiado en completarse. Por favor, inténtalo de nuevo.'
     saml:
-      feature_not_enabled: SAML feature not enabled for this account
-      sso_not_enabled: SAML SSO is not enabled for this installation
+      feature_not_enabled: 'La función SAML no está habilitada para esta cuenta'
+      sso_not_enabled: 'SAML SSO no está habilitado para esta instalación'
       multi_account_invitation_not_allowed: Los usuarios asociados con otra cuenta no pueden ser añadidos mientras SAML está habilitado
     conversations:
       resolved: La conversación está resuelta y no acepta nuevos mensajes
@@ -114,12 +127,19 @@ es:
         invalid: debe estar en formato e164
     companies:
       domain:
-        invalid: must be a valid domain name
+        invalid: 'debe ser un nombre de dominio válido'
       search:
-        query_missing: Specify search string with parameter q
+        query_missing: 'Especifica la cadena de búsqueda con el parámetro q'
+      social_profiles:
+        invalid: 'Los enlaces de perfiles sociales deben comenzar con http:// o https://'
+      enrichment:
+        plan_required: 'El enriquecimiento de empresas está disponible en los planes Business y Enterprise'
+        not_configured: 'El enriquecimiento de empresas no está configurado para esta instalación'
+        domain_missing: 'Agrega un dominio a la empresa antes de actualizar su perfil'
+        not_found: 'No se pudo encontrar información de perfil para el dominio de esta empresa'
     messages:
       search:
-        time_range_limit_exceeded: 'Search is limited to the last %{days} days'
+        time_range_limit_exceeded: 'La búsqueda está limitada a los últimos %{days} días'
     categories:
       locale:
         unique: debe ser único en la categoría y el portal
@@ -137,14 +157,23 @@ es:
     slack:
       invalid_channel_id: 'Canal de slack inválido. Por favor, inténtalo de nuevo'
     whatsapp:
-      token_exchange_failed: 'Failed to exchange code for access token. Please try again.'
-      invalid_token_permissions: 'The access token does not have the required permissions for WhatsApp.'
-      phone_info_fetch_failed: 'Failed to fetch phone number information. Please try again.'
-      phone_number_already_exists: 'Channel already exists for this phone number: %{phone_number}, please contact support if the error persists'
+      token_exchange_failed: 'No se pudo intercambiar el código por un token de acceso. Inténtalo de nuevo.'
+      invalid_token_permissions: 'El token de acceso no tiene los permisos necesarios para WhatsApp.'
+      phone_info_fetch_failed: 'No se pudo obtener la información del número de teléfono. Inténtalo de nuevo.'
+      phone_number_already_exists: 'Ya existe un canal para este número de teléfono: %{phone_number}. Contacta a soporte si el error persiste'
       message_outside_messaging_window: 'El mensaje no se envió porque la ventana de atención al cliente de WhatsApp de 24 horas está cerrada y no se proporcionaron parámetros de plantilla. Envía en su lugar un mensaje de plantilla aprobado.'
+      authentication_template_requires_phone: 'Las plantillas de autenticación requieren un número de teléfono de WhatsApp y no se pueden enviar a un contacto que solo tiene BSUID.'
+      template_category_required_for_bsuid: 'No se pudo verificar la categoría de la plantilla para este contacto que solo tiene BSUID.'
+      contact_info_request:
+        unsupported_provider: 'Las solicitudes de información de contacto actualmente solo están disponibles para bandejas de WhatsApp Cloud.'
+        phone_already_available: 'Este contacto ya tiene un número de teléfono.'
+        invalid_identifier: 'La información de contacto solo se puede solicitar a un usuario de WhatsApp con identificador de ámbito empresarial.'
+        outside_messaging_window: 'La información de contacto solo se puede solicitar dentro de la ventana de atención al cliente de 24 horas de WhatsApp.'
+        template_not_configured: 'Fuera de la ventana de atención al cliente de 24 horas se requiere una plantilla de WhatsApp aprobada con un botón de solicitud de información de contacto.'
+        pending_request: 'Ya hay una solicitud de información de contacto pendiente.'
       reauthorization:
-        generic: 'Failed to reauthorize WhatsApp. Please try again.'
-        not_supported: 'Reauthorization is not supported for this type of WhatsApp channel.'
+        generic: 'No se pudo reautorizar WhatsApp. Inténtalo de nuevo.'
+        not_supported: 'La reautorización no es compatible con este tipo de canal de WhatsApp.'
       calls:
         not_enabled: 'Llamada no está habilitada para esta bandeja de entrada'
         already_ended: 'Esta llamada ya ha finalizado'
@@ -165,10 +194,10 @@ es:
         connection_timed_out_error: Se agotó el tiempo de conexión para %{address}:%{port}
         connection_closed_error: Conexión cerrada.
       smtp:
-        authentication_error: SMTP authentication failed. Please verify your login credentials.
-        connection_error: Could not connect to SMTP server. Please check the server address and port.
-        ssl_error: SSL/TLS error. Please verify your encryption settings.
-        smtp_error: SMTP server error. Please check your configuration and try again.
+        authentication_error: 'Falló la autenticación SMTP. Verifica tus credenciales de inicio de sesión.'
+        connection_error: 'No se pudo conectar al servidor SMTP. Verifica la dirección y el puerto del servidor.'
+        ssl_error: 'Error de SSL/TLS. Verifica tu configuración de cifrado.'
+        smtp_error: 'Error del servidor SMTP. Revisa tu configuración e inténtalo de nuevo.'
       validations:
         name: no debe comenzar ni terminar con símbolos, y no debe tener caracteres < > / \ @.
     custom_filters:
@@ -178,34 +207,49 @@ es:
       invalid_query_operator: El operador de consulta debe ser "Y" o "O".
       invalid_value: Valor no válido. Los valores proporcionados para %{attribute_name} no son válidos
     custom_attribute_definition:
-      attribute_key_format: must only contain letters, numbers, underscores, hyphens, and dots
-      key_conflict: The provided key is not allowed as it might conflict with default attributes.
+      attribute_key_format: 'solo puede contener letras, números, guiones bajos, guiones y puntos'
+      key_conflict: 'La clave proporcionada no está permitida porque podría entrar en conflicto con los atributos predeterminados.'
     mfa:
-      already_enabled: MFA is already enabled
-      not_enabled: MFA is not enabled
-      invalid_code: Invalid verification code
-      invalid_backup_code: Invalid backup code
-      invalid_token: Invalid or expired MFA token
-      invalid_credentials: Invalid credentials or verification code
-      feature_unavailable: MFA feature is not available. Please configure encryption keys.
+      already_enabled: 'MFA ya está activado'
+      not_enabled: 'MFA no está activado'
+      invalid_code: 'Código de verificación no válido'
+      invalid_backup_code: 'Código de respaldo no válido'
+      invalid_token: 'Token de MFA no válido o caducado'
+      invalid_credentials: 'Credenciales o código de verificación no válidos'
+      feature_unavailable: 'La función MFA no está disponible. Configura las claves de cifrado.'
+      setup_required: 'Tu cuenta requiere autenticación de dos factores. Configúrala para continuar iniciando sesión.'
+      enrollment_required: 'Esta cuenta requiere autenticación de dos factores. Configúrala en los ajustes de tu perfil para restaurar el acceso a la API.'
+      interactive_session_required: 'Los ajustes de autenticación de dos factores no se pueden administrar con un token de acceso de API. Inicia sesión en el panel.'
+      enforced_cannot_disable: 'Tu cuenta exige la autenticación de dos factores y no se puede desactivar.'
+    device_verification:
+      invalid_token: 'Token de verificación no válido o caducado, inicia sesión de nuevo para obtener un código nuevo'
+      invalid_code: 'Código incorrecto. Introduce el código de 6 dígitos que enviamos a tu correo.'
+      expired: 'El código de verificación caducó, inicia sesión de nuevo para obtener uno nuevo'
+      locked: 'Demasiados códigos incorrectos, inicia sesión de nuevo para obtener uno nuevo'
+      stale: 'Tu cuenta cambió desde que se emitió este código, inicia sesión de nuevo'
+      rate_limited: 'Demasiados intentos de verificación, inténtalo más tarde o restablece tu contraseña'
+      code_field_required: 'Introduce el código de 6 dígitos de tu correo en el campo de código de verificación, no en el de código de respaldo'
     billing:
       invalid_currency: Moneda de facturación no válida
       currency_locked: La moneda de facturación no se puede cambiar después de que se haya configurado la facturación
+      provider_action_unavailable: 'Esta acción de facturación no está disponible para cuentas facturadas por Shopify'
+      shopify_pricing_unavailable: 'Los precios de la aplicación de Shopify no están disponibles en este momento'
+      shopify_verification_failed: 'No se pudo verificar la facturación de Shopify en este momento'
     topup:
-      credits_required: Credits amount is required
-      invalid_credits: Invalid credits amount
-      invalid_option: Invalid topup option
-      plan_not_eligible: Top-ups are only available for paid plans. Please upgrade your plan first.
-      stripe_customer_not_configured: Stripe customer not configured
-      no_payment_method: No payment methods found. Please add a payment method before making a purchase.
+      credits_required: 'La cantidad de créditos es obligatoria'
+      invalid_credits: 'Cantidad de créditos no válida'
+      invalid_option: 'Opción de recarga no válida'
+      plan_not_eligible: 'Las recargas solo están disponibles para planes de pago. Mejora tu plan primero.'
+      stripe_customer_not_configured: 'Cliente de Stripe no configurado'
+      no_payment_method: 'No se encontraron métodos de pago. Agrega un método de pago antes de realizar una compra.'
     reports:
-      date_range_too_long: Date range cannot exceed 6 months
+      date_range_too_long: 'El rango de fechas no puede superar los 6 meses'
   profile:
     mfa:
-      enabled: MFA enabled successfully
-      disabled: MFA disabled successfully
+      enabled: 'MFA activado correctamente'
+      disabled: 'MFA desactivado correctamente'
     account_saml_settings:
-      invalid_certificate: must be a valid X.509 certificate in PEM format
+      invalid_certificate: 'debe ser un certificado X.509 válido en formato PEM'
   reports:
     period: Reportando el periodo desde %{since} hasta %{until}
     utc_warning: El informe generado está en zona horaria UTC
@@ -227,7 +271,7 @@ es:
       conversations_count: Núm. de conversaciones
       avg_first_response_time: Promedio de tiempo de la primera respuesta
       avg_resolution_time: Tiempo promedio de resolución
-      avg_reply_time: Avg reply time
+      avg_reply_time: 'Tiempo medio de respuesta'
       resolution_count: Número de resoluciones
     team_csv:
       team_name: Nombre del equipo
@@ -242,10 +286,10 @@ es:
       outgoing_messages_count: Mensajes enviados
       avg_first_response_time: Promedio de tiempo de la primera respuesta
       avg_resolution_time: Tiempo promedio de resolución
-      resolution_count: Resolution count
+      resolution_count: 'Número de resoluciones'
       avg_customer_waiting_time: Tiempo promedio de espera del cliente
     conversation_traffic_csv:
-      timezone: Timezone
+      timezone: 'Zona horaria'
     sla_csv:
       conversation_id: ID de conversación
       sla_policy_breached: Política de SLA
@@ -266,7 +310,7 @@ es:
         rating: Calificación
         feedback: Comentario de opinión
         recorded_at: Fecha registrada
-        review_notes: Review Notes
+        review_notes: 'Notas de revisión'
   notifications:
     notification_title:
       conversation_creation: 'Una conversación (#%{display_id}) ha sido creada en %{inbox_name}'
@@ -280,17 +324,18 @@ es:
     no_content: 'Sin contenido'
   conversations:
     captain:
-      handoff: 'Transferring to another agent for further assistance.'
+      handoff: 'Transfiriendo a otro agente para obtener más ayuda.'
     messages:
       instagram_story_content: '%{story_sender} te mencionó en la historia: '
       instagram_deleted_story_content: Esta historia ya no está disponible.
-      instagram_shared_story_content: 'Shared story'
-      instagram_shared_post_content: 'Shared post'
+      instagram_shared_story_content: 'Historia compartida'
+      instagram_shared_post_content: 'Publicación compartida'
       deleted: Este mensaje se ha eliminado
       whatsapp:
-        list_button_label: 'Choose an item'
+        list_button_label: 'Elige un elemento'
         call_permission_request_body: 'Nos gustaría llamarte en relación con tu conversación.'
         flow_response: 'Envió una respuesta de flujo'
+        request_contact_info: '¿Quieres compartir tu número de teléfono con nosotros?'
         unsupported_message: 'Este mensaje no está disponible.'
       voice_call:
         twilio: 'Llamada de voz'
@@ -299,14 +344,14 @@ es:
         error_code: 'Código de error: %{error_code}'
     activity:
       captain:
-        resolved: 'Conversation was marked resolved by %{user_name} due to inactivity'
-        resolved_with_reason: 'Conversation was marked resolved by %{user_name} (%{reason})'
-        resolved_by_tool: 'Conversation was marked resolved by %{user_name}: %{reason}'
-        open: 'Conversation was marked open by %{user_name}'
-        open_with_reason: 'Conversation was marked open by %{user_name} (%{reason})'
-        auto_opened_after_agent_reply: 'Conversation was marked open automatically after an agent reply'
+        resolved: 'La conversación fue marcada como resuelta por %{user_name} por inactividad'
+        resolved_with_reason: 'La conversación fue marcada como resuelta por %{user_name} (%{reason})'
+        resolved_by_tool: 'La conversación fue marcada como resuelta por %{user_name}: %{reason}'
+        open: 'La conversación fue marcada como abierta por %{user_name}'
+        open_with_reason: 'La conversación fue marcada como abierta por %{user_name} (%{reason})'
+        auto_opened_after_agent_reply: 'La conversación fue marcada como abierta automáticamente tras la respuesta de un agente'
       agent_bot:
-        error_moved_to_open: 'Conversation was marked open by system due to an error with the agent bot.'
+        error_moved_to_open: 'La conversación fue marcada como abierta por el sistema debido a un error con el bot de agente.'
       status:
         resolved: 'La conversación fue marcada por %{user_name}'
         contact_resolved: 'Conversación fue resuelta por %{contact_name}'
@@ -314,8 +359,8 @@ es:
         pending: 'La conversación fue marcada como pendiente por %{user_name}'
         snoozed: 'La conversación fue pospuesta por %{user_name}'
         auto_resolved_days: 'La conversación fue marcada por el sistema debido a %{count} días de inactividad'
-        auto_resolved_hours: 'Conversation was marked resolved by system due to %{count} hours of inactivity'
-        auto_resolved_minutes: 'Conversation was marked resolved by system due to %{count} minutes of inactivity'
+        auto_resolved_hours: 'La conversación fue marcada como resuelta por el sistema debido a %{count} horas de inactividad'
+        auto_resolved_minutes: 'La conversación fue marcada como resuelta por el sistema debido a %{count} minutos de inactividad'
         system_auto_open: El sistema reabrió la conversación debido a un nuevo mensaje entrante.
       priority:
         added: '%{user_name} estableció la prioridad a %{new_priority}'
@@ -336,16 +381,16 @@ es:
         added: '%{user_name} agregó la política de SLA %{sla_name}'
         removed: '%{user_name} eliminó la política de SLA %{sla_name}'
       linear:
-        issue_created: 'Linear issue %{issue_id} was created by %{user_name}'
-        issue_linked: 'Linear issue %{issue_id} was linked by %{user_name}'
-        issue_unlinked: 'Linear issue %{issue_id} was unlinked by %{user_name}'
+        issue_created: '%{user_name} creó la incidencia de Linear %{issue_id}'
+        issue_linked: '%{user_name} vinculó la incidencia de Linear %{issue_id}'
+        issue_unlinked: '%{user_name} desvinculó la incidencia de Linear %{issue_id}'
       whatsapp_call:
         permission_requested: 'Envió una solicitud de permiso de llamada a %{contact_name}.'
         permission_granted: '%{contact_name} ha aceptado la solicitud de permiso de llamada.'
       csat:
-        not_sent_due_to_messaging_window: 'CSAT survey not sent due to outgoing message restrictions'
+        not_sent_due_to_messaging_window: 'La encuesta CSAT no se envió debido a restricciones de mensajes salientes'
       auto_resolve:
-        not_sent_due_to_messaging_window: 'Auto-resolve message not sent due to outgoing message restrictions'
+        not_sent_due_to_messaging_window: 'El mensaje de resolución automática no se envió debido a restricciones de mensajes salientes'
       muted: '%{user_name} ha silenciado la conversación'
       unmuted: '%{user_name} ha anulado el silenciado de la conversación'
       auto_resolution_message: 'Resolviendo la conversación, ya que ha estado inactiva durante un tiempo. Por favor, inicia una nueva conversación si necesitas más ayuda.'
@@ -361,64 +406,73 @@ es:
           from_with_name: '%{assignee_name} de %{inbox_name} <%{from_email}>'
           reply_with_name: '%{assignee_name} de %{inbox_name} <reply+%{reply_email}>'
           friendly_name: '%{sender_name} de %{business_name} <%{from_email}>'
-          professional_name: '%{business_name} <%{from_email}>'
       channel_email:
         header:
           reply_with_name: '%{assignee_name} de %{inbox_name} <%{from_email}>'
           reply_with_inbox_name: '%{inbox_name} <%{from_email}>'
       email_subject: 'Nuevos mensajes en esta conversación'
       transcript_subject: 'Transcripción de la conversación'
+      greeting: 'Hola %{name},'
+      new_messages: 'Tienes nuevos mensajes en tu conversación.'
+      contact_label: 'Tú'
+      bot_label: 'Bot'
+      attachments: 'Archivos adjuntos:'
+      rate_conversation_html: 'Haz clic %{link} para calificar la conversación.'
+      rate_conversation_link: 'aquí'
     survey:
       response: 'Por favor califica esta conversación, %{link}'
   contacts:
     online:
       delete: '%{contact_name} está conectado, por favor inténtalo más tarde'
   integration_apps:
-    #Note: webhooks and dashboard_apps don't need short_description as they use different modal components
+    stripe:
+      name: 'Stripe'
+      short_description: 'Consulta los datos de facturación de los clientes en las conversaciones.'
+      description: 'Consulta los datos de clientes, suscripciones y facturas recientes de Stripe junto a tus conversaciones.'
     dashboard_apps:
       name: 'Panel de aplicaciones'
       description: 'Las aplicaciones de panel te permiten crear e incrustar aplicaciones que muestran información de usuario, pedidos o historial de pagos, proporcionando más contexto a tus agentes de soporte al cliente.'
     dyte:
       name: 'Dyte'
-      short_description: 'Start video/voice calls with customers directly from Chatwoot.'
+      short_description: 'Inicia videollamadas o llamadas de voz con clientes directamente desde Chatwoot.'
       description: 'Dyte es un producto que integra funcionalidades de audio y video en tu aplicación. Con esta integración, tus agentes pueden iniciar llamadas de video/voz con tus clientes directamente desde Chatwoot.'
       meeting_name: '%{agent_name} ha iniciado una reunión'
     slack:
       name: 'Slack'
-      short_description: 'Receive notifications and respond to conversations directly in Slack.'
+      short_description: 'Recibe notificaciones y responde a las conversaciones directamente en Slack.'
       description: "Integra Chatwoot con Slack para mantener a tu equipo sincronizado. Esta integración te permite recibir notificaciones de nuevas conversaciones y responder directamente desde la interfaz de Slack."
     webhooks:
       name: 'Webhook'
       description: 'Los eventos de webhook proporcionan actualizaciones en tiempo real sobre las actividades en tu cuenta de Chatwoot. Puedes suscribirte a los eventos que prefieras y Chatwoot te enviará llamadas HTTP con las actualizaciones.'
     dialogflow:
       name: 'Dialogflow'
-      short_description: 'Build chatbots to handle initial queries before transferring to agents.'
+      short_description: 'Crea chatbots para gestionar las consultas iniciales antes de transferirlas a los agentes.'
       description: 'Construye chatbots con Dialogflow e intégralos fácilmente en tu bandeja de entrada. Estos bots pueden manejar consultas iniciales antes de transferirlas a un agente de servicio al cliente.'
     google_translate:
       name: 'Traductor de Google'
-      short_description: 'Automatically translate customer messages for agents.'
+      short_description: 'Traduce automáticamente los mensajes de los clientes para los agentes.'
       description: "Integra Google Translate para ayudar a los agentes a traducir fácilmente los mensajes de los clientes. Esta integración detecta automáticamente el idioma y lo convierte al idioma preferido del agente o del administrador."
     openai:
       name: 'OpenAI'
-      short_description: 'AI-powered reply suggestions, summarization, and message enhancement.'
+      short_description: 'Sugerencias de respuesta, resúmenes y mejora de mensajes con IA.'
       description: 'Aprovecha el poder de los grandes modelos de lenguaje de OpenAI con funciones como sugerencias de respuestas, resúmenes, reformulación de mensajes, corrección ortográfica y clasificación de etiquetas.'
     linear:
       name: 'Lineal'
-      short_description: 'Create and link Linear issues directly from conversations.'
+      short_description: 'Crea y vincula incidencias de Linear directamente desde las conversaciones.'
       description: 'Crea problemas en Linear directamente desde tu ventana de conversación. Alternativamente, enlaza problemas existentes en Linear para un proceso de seguimiento de problemas más eficiente y ágil.'
       attachment_link_title: 'Conversación (%{conversation_id}) con %{name}'
     notion:
       name: 'Notion'
-      short_description: 'Integrate databases, documents and pages directly with Captain.'
-      description: 'Connect your Notion workspace to enable Captain to access and generate intelligent responses using content from your databases, documents, and pages to provide more contextual customer support.'
+      short_description: 'Integra bases de datos, documentos y páginas directamente con Captain.'
+      description: 'Conecta tu espacio de trabajo de Notion para que Captain pueda acceder al contenido de tus bases de datos, documentos y páginas y generar respuestas inteligentes que brinden un soporte al cliente más contextual.'
     shopify:
       name: 'Shopify'
-      short_description: 'Access order details and customer data from your Shopify store.'
-      description: 'Connect your Shopify store to access order details, customer information, and product data directly within your conversations and helps your support team provide faster, more contextual assistance to your customers.'
+      short_description: 'Accede a los detalles de pedidos y datos de clientes de tu tienda de Shopify.'
+      description: 'Conecta tu tienda de Shopify para acceder a los detalles de pedidos, la información de clientes y los datos de productos directamente en tus conversaciones, y ayuda a tu equipo de soporte a ofrecer una asistencia más rápida y contextual a tus clientes.'
     leadsquared:
       name: 'LeadSquared'
-      short_description: 'Sync your contacts and conversations with LeadSquared CRM.'
-      description: 'Sync your contacts and conversations with LeadSquared CRM. This integration automatically creates leads in LeadSquared when new contacts are added, and logs conversation activity to provide your sales team with complete context.'
+      short_description: 'Sincroniza tus contactos y conversaciones con el CRM de LeadSquared.'
+      description: 'Sincroniza tus contactos y conversaciones con el CRM de LeadSquared. Esta integración crea automáticamente leads en LeadSquared cuando se agregan nuevos contactos y registra la actividad de las conversaciones para dar a tu equipo de ventas el contexto completo.'
   captain:
     copilot_message_required: El mensaje es obligatorio
     copilot_error: 'Conecte un asistente a esta bandeja de entrada para utilizar Copilot'
@@ -434,31 +488,47 @@ es:
       reply_suggestion_discarded: 'La conversación cambió mientras Copilot estaba redactando el borrador, así que la sugerencia fue descartada.'
       reply_suggestion_failed: "Copilot no pudo generar una respuesta. Por favor, inténtelo de nuevo."
     documents:
-      limit_exceeded: 'Document limit exceeded'
-      pdf_format_error: 'must be a PDF file'
-      pdf_size_error: 'must be less than 10MB'
+      limit_exceeded: 'Límite de documentos superado'
+      pdf_format_error: 'debe ser un archivo PDF'
+      pdf_size_error: 'debe ser inferior a 10 MB'
+      markdown_format_error: 'debe ser un archivo Markdown'
+      markdown_size_error: 'debe contener 10.000 caracteres o menos'
+      multiple_files_error: 'Un documento solo puede contener un archivo subido'
       sync_not_supported_for_pdf: 'La sincronización no es compatible con documentos PDF'
+      sync_not_supported_for_file: 'La sincronización no es compatible con los documentos subidos'
       sync_only_available_documents: 'La sincronización sólo está disponible para documentos procesados'
       sync_already_in_progress: 'La sincronización de documentos ya está en progreso'
-      pdf_upload_failed: 'Failed to upload PDF to OpenAI'
-      pdf_upload_success: 'PDF uploaded successfully with file_id: %{file_id}'
-      pdf_processing_failed: 'Failed to process PDF document %{document_id}: %{error}'
-      pdf_processing_success: 'Successfully processed PDF document %{document_id}'
-      faq_generation_complete: 'FAQ generation complete. Total FAQs created: %{count}'
-      using_paginated_faq: 'Using paginated FAQ generation for document %{document_id}'
-      using_standard_faq: 'Using standard FAQ generation for document %{document_id}'
-      response_creation_error: 'Error in creating response document: %{error}'
-      missing_openai_file_id: 'Document must have openai_file_id for paginated processing'
-      openai_api_error: 'OpenAI API Error: %{error}'
-      starting_paginated_faq: 'Starting paginated FAQ generation (%{pages_per_chunk} pages per chunk)'
-      stopping_faq_generation: 'Stopping processing. Reason: %{reason}'
-      paginated_faq_complete: 'Paginated generation complete. Total FAQs: %{total_faqs}, Pages processed: %{pages_processed}'
-      processing_pages: 'Processing pages %{start}-%{end} (iteration %{iteration})'
-      chunk_generated: 'Chunk generated %{chunk_faqs} FAQs. Total so far: %{total_faqs}'
-      page_processing_error: 'Error processing pages %{start}-%{end}: %{error}'
+      pdf_upload_failed: 'No se pudo subir el PDF a OpenAI'
+      pdf_upload_success: 'PDF subido correctamente con file_id: %{file_id}'
+      pdf_processing_failed: 'No se pudo procesar el documento PDF %{document_id}: %{error}'
+      pdf_processing_success: 'Documento PDF %{document_id} procesado correctamente'
+      faq_generation_complete: 'Generación de preguntas frecuentes completada. Total de preguntas frecuentes creadas: %{count}'
+      using_paginated_faq: 'Usando generación paginada de preguntas frecuentes para el documento %{document_id}'
+      using_standard_faq: 'Usando generación estándar de preguntas frecuentes para el documento %{document_id}'
+      response_creation_error: 'Error al crear el documento de respuesta: %{error}'
+      missing_openai_file_id: 'El documento debe tener openai_file_id para el procesamiento paginado'
+      openai_api_error: 'Error de la API de OpenAI: %{error}'
+      starting_paginated_faq: 'Iniciando la generación paginada de preguntas frecuentes (%{pages_per_chunk} páginas por fragmento)'
+      stopping_faq_generation: 'Deteniendo el procesamiento. Motivo: %{reason}'
+      paginated_faq_complete: 'Generación paginada completada. Total de preguntas frecuentes: %{total_faqs}, páginas procesadas: %{pages_processed}'
+      processing_pages: 'Procesando páginas %{start}-%{end} (iteración %{iteration})'
+      chunk_generated: 'El fragmento generó %{chunk_faqs} preguntas frecuentes. Total hasta ahora: %{total_faqs}'
+      page_processing_error: 'Error al procesar las páginas %{start}-%{end}: %{error}'
     custom_tool:
-      slug_generation_failed: 'Unable to generate unique slug after 5 attempts'
+      slug_generation_failed: 'No se pudo generar un slug único tras 5 intentos'
       limit_exceeded: 'You can create a maximum of %{limit} custom tools per account'
+      installed_read_only: 'Las herramientas instaladas desde un manifiesto son de solo lectura; solo puedes activarlas o desactivarlas'
+      headers:
+        invalid: 'debe ser un objeto con nombres y valores de encabezados'
+        too_many: 'no puede contener más de %{limit} entradas'
+        duplicate: 'no puede repetir el mismo nombre de encabezado'
+        invalid_name: '%{name} no es un nombre de encabezado válido'
+        reserved: '%{name} lo gestiona Chatwoot y no se puede establecer'
+        invalid_value: 'el valor de %{name} debe ser texto fijo de hasta 1 KiB, sin marcadores de posición ni caracteres de control'
+    tools_manifest:
+      invalid_source: 'Introduce un conjunto de herramientas del catálogo de herramientas de Captain como chatwoot/tools/carpeta'
+      invalid_configuration: 'Configuración no válida'
+      disabled: 'La instalación de herramientas desde un manifiesto no está habilitada'
   public_portal:
     search:
       search_placeholder: Buscar artículo por título o cuerpo...
@@ -518,7 +588,7 @@ es:
       made_with: Hecho con
     header:
       go_to_homepage: Sitio web
-      visit_website: Visit website
+      visit_website: 'Visitar sitio web'
       appearance:
         title: Apariencia
         system: Sistema
@@ -532,9 +602,9 @@ es:
       description: No pudimos encontrar la página que estaba buscando.
       back_to_home: Ir a la página de inicio
     not_active:
-      title: Help Center Unavailable
-      description: Please contact the site administrator for more information.
-      action: If you are the administrator, please upgrade your plan to restore access.
+      title: 'Centro de ayuda no disponible'
+      description: 'Contacta al administrador del sitio para obtener más información.'
+      action: 'Si eres el administrador, mejora tu plan para restaurar el acceso.'
   slack_unfurl:
     fields:
       name: Nombre
@@ -558,32 +628,32 @@ es:
       one: '%{count} segundo'
       other: '%{count} segundos'
   auto_assignment:
-    default_policy_name: 'Default Policy'
-    policy_actor: 'Automation System via %{policy_name}'
+    default_policy_name: 'Política predeterminada'
+    policy_actor: 'Sistema de automatización mediante %{policy_name}'
   automation:
-    system_name: 'Automation System'
+    system_name: 'Sistema de automatización'
   crm:
-    no_message: 'No messages in conversation'
-    attachment: '[Attachment: %{type}]'
+    no_message: 'No hay mensajes en la conversación'
+    attachment: '[Archivo adjunto: %{type}]'
     no_content: '[Sin contenido]'
     created_activity: |
-      New conversation started on %{brand_name}
+      Nueva conversación iniciada en %{brand_name}
 
-      Channel: %{channel_info}
-      Created: %{formatted_creation_time}
-      Conversation ID: %{display_id}
-      View in %{brand_name}: %{url}
+      Canal: %{channel_info}
+      Creada: %{formatted_creation_time}
+      ID de conversación: %{display_id}
+      Ver en %{brand_name}: %{url}
     transcript_activity: |
-      Conversation Transcript from %{brand_name}
+      Transcripción de conversación de %{brand_name}
 
-      Channel: %{channel_info}
-      Conversation ID: %{display_id}
-      View in %{brand_name}: %{url}
+      Canal: %{channel_info}
+      ID de conversación: %{display_id}
+      Ver en %{brand_name}: %{url}
 
-      Transcript:
+      Transcripción:
       %{format_messages}
   agent_capacity_policy:
-    inbox_already_assigned: 'Inbox has already been assigned to this policy'
+    inbox_already_assigned: 'La bandeja de entrada ya está asignada a esta política'
   portals:
     analytics:
       invalid_configuration: 'Configuración de analítica no válida'
@@ -595,12 +665,25 @@ es:
       invalid_status: 'Valor de estado inválido'
     send_instructions:
       email_required: 'El email es requerido'
-      invalid_email_format: 'Invalid email format'
-      custom_domain_not_configured: 'Custom domain is not configured'
-      instructions_sent_successfully: 'Instructions sent successfully'
-      subject: 'Finish setting up %{custom_domain}'
+      invalid_email_format: 'Formato de correo electrónico no válido'
+      custom_domain_not_configured: 'El dominio personalizado no está configurado'
+      instructions_sent_successfully: 'Instrucciones enviadas correctamente'
+      subject: 'Termina de configurar %{custom_domain}'
     ssl_status:
-      custom_domain_not_configured: 'Custom domain is not configured'
+      custom_domain_not_configured: 'El dominio personalizado no está configurado'
+  installation:
+    onboarding:
+      heading: 'Hola, bienvenido a Chatwoot 👋'
+      name: 'Nombre'
+      name_placeholder: 'Introduce tu nombre completo. Ej.: Bruce Wayne'
+      company: 'Nombre de la empresa'
+      company_placeholder: 'Introduce el nombre de tu empresa. Ej.: Wayne Enterprises'
+      email: 'Correo de trabajo'
+      email_placeholder: 'Introduce tu correo de trabajo. Ej.: bruce@wayne.enterprises'
+      password: 'Contraseña'
+      password_placeholder: 'Introduce una contraseña de 6 caracteres o más.'
+      subscribe: 'Suscríbete a notas de versión, boletines y encuestas de opinión sobre el producto.'
+      submit: 'Finalizar configuración'
   super_admin:
     account_suspension:
       categories:
@@ -616,7 +699,35 @@ es:
         suspended_at: 'Suspendida el'
         category: 'Categoría'
         reason: 'Motivo'
+        suspended_by: 'Suspendida por'
+        unknown_user: 'Usuario desconocido'
         empty: 'No hay historial de suspensiones registrado.'
+    accounts:
+      users: 'Usuarios'
+      conversations: 'Conversaciones'
+      maintenance: 'Mantenimiento'
+      general: 'General'
+      limits: 'Límites'
+      suspension_history: 'Historial de suspensiones'
+      custom_attributes: 'Atributos personalizados'
+      manually_managed_features: 'Funciones administradas manualmente'
+      captain_models: 'Modelos de Captain'
+      add_user: 'Agregar un usuario a esta cuenta'
+      seed_data: 'Generar datos de ejemplo'
+      reset_cache: 'Restablecer caché del frontend'
+      reset_cache_description: 'Esto borrará las claves de caché de IndexedDB en redis. La próxima carga obtendrá los datos del backend.'
+      reset_cache_button: 'Restablecer caché del frontend'
+      seed_data_description: 'Haz clic en el botón para generar datos de ejemplo en esta cuenta para demostraciones.'
+      seed_data_warning: 'Nota: esto borrará todos los datos existentes de esta cuenta.'
+      seed_data_button: 'Generar datos de ejemplo'
+    actions:
+      save_changes: 'Guardar cambios'
+      select_all: 'Seleccionar todo'
+      clear: 'Borrar'
+      close: 'Cerrar'
+      more: 'Más'
+      copy: 'Copiar'
+      toggle_secret: 'Mostrar u ocultar'
     captain_model_overrides:
       form:
         helper_text: 'Deja un modelo en blanco para usar la ruta predeterminada para esa función de IA.'
@@ -637,7 +748,6 @@ es:
         editor: 'Editor'
         assistant: 'Asistente'
         copilot: 'Copilot'
-        label_suggestion: 'Sugerencia de etiqueta'
         document_faq_generation: 'Generación de FAQ de documentos'
         conversation_faq_generation: 'Generación de FAQ de conversación'
         conversation_faq_matching: 'Coincidencia de preguntas frecuentes con conversaciones'
@@ -646,15 +756,275 @@ es:
         help_center_query_translation: 'Traducción de consultas al centro de ayuda'
         audio_transcription: 'Transcripción de audio'
         help_center_search: 'Centro de búsqueda de ayuda'
-    push_diagnostics:
+    collection:
+      actions: 'Acciones'
+      empty: 'No se encontró %{resource}.'
+      showing: 'Mostrando %{from}–%{to} de %{total}'
+    command_bar:
+      label: 'Barra de comandos'
+      trigger: 'Buscar'
+      placeholder: 'Busca o ejecuta un comando'
+      empty: 'No se encontraron resultados.'
+      go_to: 'Ir a'
+      create: 'Crear'
+      open: 'Abrir'
+      see_all: 'Ver todos los %{resource} coincidentes'
+      navigate: 'Navegar'
+      select: 'Seleccionar'
+    dashboard:
+      description: 'Cuentas, usuarios y volumen de conversaciones en esta instalación.'
+      new_user: 'Nuevo usuario'
+      new_account: 'Nueva cuenta'
+      installation: 'Instalación'
+      version: 'Versión'
+      plan: 'Plan'
+      shortcuts: 'Atajos'
+    features:
+      title: 'Funciones'
+      premium: 'Funciones premium'
+      filter: 'Filtrar funciones'
+      no_match: 'Ninguna función coincide con este filtro.'
+      enabled: 'Habilitada'
+      disabled: 'Deshabilitada'
+      enabled_count: '%{enabled} de %{total} habilitadas'
+      selected: 'Seleccionada'
+      not_selected: 'No seleccionada'
+      selected_count: '%{selected} de %{total} seleccionadas'
+      help_article: 'Artículo de ayuda'
+      manually_managed_hint: 'Funciones que permanecen habilitadas incluso cuando se reduce el plan de la cuenta'
+      manually_managed_empty: 'No hay funciones administradas manualmente configuradas'
+    filters:
+      label: 'Filtrar por'
+      all: 'Todos'
+    instance_status:
+      description: 'Versiones y estado de conexión de los servicios en los que se ejecuta esta instalación.'
+      details: 'Detalles'
+    login:
+      heading: 'Hola, admin 👋'
+      email: 'Dirección de correo electrónico'
+      email_placeholder: 'Correo, p. ej.: alguien@example.com'
+      password: 'Contraseña'
+      password_placeholder: 'Contraseña'
+      submit: 'Iniciar sesión'
+    navigation:
+      label: 'Super Admin'
+      suffix: 'Consola de Super Admin'
+      back: 'Volver'
+      groups:
+        manage: 'Administrar'
+        instance: 'Instancia'
+      release_notes: 'Notas de versión'
+      update_available: 'v%{version} está disponible'
+      dashboard: 'Panel'
+      settings: 'Configuración'
+      monitor: 'Monitor'
+      more: 'Más'
+      agent_dashboard: 'Panel de agente'
+      account: 'Cuenta'
+      profile: 'Perfil'
+      logout: 'Cerrar sesión'
+      overview: 'Resumen'
+      instance_health: 'Salud de la instancia'
+      user_diagnostics: 'Diagnóstico de usuarios'
+      sidekiq_dashboard: 'Panel de Sidekiq'
+      tabs:
+        agent_bots: 'Bots'
+        platform_apps: 'Apps'
+        platform_banners: 'Banners'
+      settings_groups:
+        product: 'Producto'
+        channels: 'Canales'
+        authentication: 'Autenticación'
+        integrations: 'Integraciones'
+      theme:
+        label: 'Tema'
+        system: 'Igual que el sistema'
+        light: 'Claro'
+        dark: 'Oscuro'
+    user_diagnostics:
+      description: 'Busca un usuario para solucionar un problema que haya reportado. Cada pestaña cubre una parte de su configuración.'
       user_not_found: 'Usuario no encontrado.'
-      no_subscriptions_to_test: 'Seleccione al menos una suscripción para probar.'
-      no_subscriptions_to_delete: 'Seleccione al menos una suscripción a eliminar.'
-      subscriptions_deleted:
-        one: "Suscripción %{count} eliminada. El dispositivo del usuario volverá a registrarse en el próximo lanzamiento de la aplicación."
-        other: "Suscripciones %{count} eliminadas. Los dispositivos de los usuarios se registrarán en el próximo lanzamiento de la aplicación."
+      tabs:
+        label: 'Secciones de diagnóstico'
+        mobile: 'App móvil'
+        push: 'Entrega de push'
+        web: 'Web'
+      search:
+        title: 'Buscar usuario'
+        placeholder: 'user@example.com o ID numérico de usuario'
+        submit: 'Buscar'
+        not_found: 'No se encontró ningún usuario para "%{query}".'
+      user:
+        id: 'ID %{id}'
+        accounts: 'Cuentas'
+        details_link: 'Detalles del usuario'
+      sessions:
+        heading: 'Sesiones móviles'
+        description: 'Se completa con los encabezados X-Chatwoot-* que la app envía en cada solicitud, por lo que refleja la compilación instalada actualmente en el dispositivo.'
+        empty:
+          title: 'No se registraron sesiones móviles.'
+          description: 'Este usuario no ha iniciado sesión desde la app de iOS o Android.'
+        legacy_build: 'compilación antigua'
+        legacy_note: '"compilación antigua" significa que la sesión es anterior a la versión 4.8.0 de la app, cuando la app empezó a enviar X-Chatwoot-Client-Version. Se desconoce la compilación exacta.'
+        columns:
+          app_version: 'Versión de la app'
+          platform: 'Plataforma'
+          os_version: 'Versión del SO'
+          device: 'Dispositivo'
+          first_seen: 'Visto por primera vez'
+          last_active: 'Última actividad'
+      web_sessions:
+        heading: 'Sesiones web'
+        description: 'Se lee del user agent del navegador al iniciar sesión y se actualiza mientras el usuario trabaja, por lo que refleja el navegador en uso. Solo se listan las sesiones que siguen iniciadas.'
+        empty:
+          title: 'No se registraron sesiones web.'
+          description: 'Este usuario no tiene sesión iniciada desde un navegador.'
+        columns:
+          browser: 'Navegador'
+          browser_version: 'Versión'
+          os: 'Sistema operativo'
+          os_version: 'Versión del SO'
+          first_seen: 'Visto por primera vez'
+          last_active: 'Última actividad'
+      devices:
+        heading: 'Dispositivos registrados'
+        empty:
+          title: 'No hay dispositivos registrados.'
+          description: 'Este usuario no tiene ningún dispositivo registrado para recibir notificaciones push.'
+        build_number_note: 'buildNumber aquí es el número de compilación nativa, no la versión de la app que aparece en la pestaña App móvil.'
+        columns:
+          id: 'ID'
+          type: 'Tipo'
+          device: 'Dispositivo'
+          token: 'Token'
+          details: 'Detalles del dispositivo'
+          registered: 'Registrado'
+          last_updated: 'Última actualización'
+      push_settings:
+        heading: 'Configuración de notificaciones push'
+        description: 'Se define por cuenta y se comprueba una vez antes de probar cualquier suscripción. Con todos los tipos desactivados, el usuario no recibe push en ningún dispositivo, por muy sanos que parezcan los registros de abajo.'
+        review_link: 'Revisar la configuración de notificaciones push →'
+        empty:
+          title: 'No se registró configuración de notificaciones.'
+          description: 'Este usuario no pertenece a ninguna cuenta.'
+        notification_type: 'Tipo de notificación'
+        unnamed_account: 'Cuenta %{id}'
+        sla_unavailable: 'SLA no está habilitado en esta cuenta'
+        none_enabled:
+          one: 'No hay tipos de push habilitados para %{names}. Este usuario no recibe ninguna notificación push de esa cuenta.'
+          other: 'No hay tipos de push habilitados para %{names}. Este usuario no recibe ninguna notificación push de esas cuentas.'
+      push_types:
+        conversation_creation: 'Se crea una nueva conversación'
+        conversation_assignment: 'Se asigna una conversación al usuario'
+        conversation_mention: 'Se menciona al usuario en una conversación'
+        assigned_conversation_new_message: 'Se crea un mensaje nuevo en una conversación asignada'
+        participating_conversation_new_message: 'Se crea un mensaje nuevo en una conversación en la que participa'
+        sla_missed_first_response: 'Una conversación incumple el SLA de primera respuesta'
+        sla_missed_next_response: 'Una conversación incumple el SLA de siguiente respuesta'
+        sla_missed_resolution: 'Una conversación incumple el SLA de resolución'
+      push:
+        real_push_warning: 'Esto envía un push real a cada dispositivo seleccionado. Úsalo solo al diagnosticar un problema reportado.'
+        title_label: 'Título'
+        body_label: 'Cuerpo'
+        body_hint: 'Los clientes verán este texto como una notificación push real en su dispositivo.'
+        send_test: 'Enviar push de prueba a los seleccionados'
+        delete_selected: 'Eliminar suscripciones seleccionadas'
+        delete_confirm: '¿Eliminar las suscripciones seleccionadas? El usuario no recibirá pushes en esos dispositivos hasta que su app se vuelva a registrar.'
+        no_subscriptions_to_test: 'Selecciona al menos una suscripción para probar.'
+        no_subscriptions_to_delete: 'Selecciona al menos una suscripción para eliminar.'
+        subscriptions_deleted:
+          one: 'Se eliminó %{count} suscripción. El dispositivo del usuario se volverá a registrar en el próximo inicio de la app.'
+          other: 'Se eliminaron %{count} suscripciones. Los dispositivos de los usuarios se volverán a registrar en el próximo inicio de la app.'
+        results_heading: 'Resultados'
+        results_columns:
+          id: 'ID de suscripción'
+          type: 'Tipo'
+          device: 'Dispositivo'
+          token: 'Token push'
+          status: 'Estado'
+          details: 'Detalles'
+    record:
+      overview: 'Resumen'
+      profile: 'Perfil'
+      created: 'Creado'
+      last_updated: 'Última actualización'
+      time_ago: 'hace %{time}'
+    settings:
+      pages:
+        general: 'General'
+        internal: 'Interno'
+        internal_description: 'Claves e interruptores usados por Chatwoot Cloud'
+      configure: 'Configurar'
+      enterprise_badge: 'EE'
+      included: 'Incluido'
+      locked: 'Bloqueado'
+      installation_identifier_description: 'ID único de esta instalación.'
+      default_description: 'Opciones para toda la instancia'
+      description: 'Actualiza la configuración de tu instancia y accede al portal de facturación'
+      configure_title: 'Configurar ajustes - %{config}'
+      alert: '¡Alerta!'
+      unauthorized_changes: 'Se detectaron cambios premium no autorizados en Chatwoot. Para seguir usándolos, mejora tu plan.'
+      contact_for_help: 'Contacto para obtener ayuda:'
+      agents_over_limit: 'Tienes %{count} agentes. Agrega más licencias para añadir más usuarios.'
+      current_plan: 'Plan actual'
+      refresh: 'Actualizar'
+      manage: 'Administrar'
+      installation_identifier: 'Identificador de instalación'
+      need_help: '¿Necesitas ayuda?'
+      need_help_description: '¿Tienes algún problema? Estamos aquí para ayudarte.'
+      community_support: 'Soporte de la comunidad'
+      chat_support: 'Soporte por chat'
+      switch_to_enterprise: 'Cambiar a la edición Enterprise'
+      upgrade_now: 'Mejorar ahora'
     users:
+      impersonate: 'Suplantar usuario'
+      copy_impersonation_link: 'Copiar enlace'
+      impersonation_link_copied: 'Copiado'
+      impersonation_link_failed: 'Error al copiar'
+      support: 'Soporte'
+      impersonate_dialog:
+        title: '¿Suplantar a %{name}?'
+        private_window_hint: 'Esto inicia sesión en el panel con este usuario en tu navegador y reemplaza tu propia sesión. Para conservar la tuya, copia el enlace y ábrelo en una ventana privada.'
+      impersonate_caution: 'Cualquier acción que realices mientras suplantas aparecerá como realizada por %{name}.'
+      accounts: 'Cuentas'
+      confirmed: 'Confirmado'
+      unconfirmed: 'Sin confirmar'
+      mfa: 'MFA'
+      mfa_enabled: 'Activado'
+      mfa_disabled: 'Desactivado'
+      add_account: 'Agregar este usuario a una cuenta'
       resend_confirmation:
         button: 'Reenviar email de confirmación'
         sent: 'Correo de confirmación enviado.'
         already_confirmed: 'El usuario ya está confirmado.'
+      email_suppression:
+        menu: 'Correo'
+        check_button: 'Comprobar entrega de correo'
+        clear_button: 'Desbloquear correo'
+        clear_dialog:
+          title: '¿Desbloquear %{email}?'
+          body: '%{brand_name} volverá a enviar correos a esta dirección. Si el siguiente rebota, se bloqueará de nuevo.'
+          cancel: 'Cancelar'
+          confirm: 'Desbloquear'
+        complaint_hint: 'Bloqueada tras una queja de spam. Escala a ingeniería.'
+        check_first_hint: 'Comprueba primero la entrega de correo.'
+        not_blocked_hint: 'Los correos a esta dirección no están bloqueados.'
+        test_email_blocked_hint:
+          bounce: 'Desbloquea primero la dirección. Los correos a direcciones bloqueadas se descartan.'
+          complaint: 'Bloqueada tras una queja de spam. Los correos a esta dirección se descartan.'
+        test_email_button: 'Enviar correo de prueba'
+        pending:
+          check: 'Comprobando…'
+          clear: 'Desbloqueando…'
+          send: 'Enviando…'
+        check:
+          not_suppressed: 'Los correos a %{email} no están bloqueados.'
+          bounce: 'Los correos a %{email} están bloqueados desde %{since} porque la dirección rebotó. Desbloquéala y pide al usuario que lo intente de nuevo.'
+          complaint: 'Los correos a %{email} están bloqueados desde %{since} por una queja de spam. Escala a ingeniería.'
+          unavailable: 'No se pudo comprobar la entrega para %{email}. Inténtalo de nuevo o escala a ingeniería.'
+        clear:
+          success: 'Se desbloqueó %{email}. Pide al usuario que lo intente de nuevo o envía un correo de prueba para comprobar la entrega.'
+          failed: 'No se pudo desbloquear %{email} (%{error}). Escala a ingeniería.'
+        test_email:
+          queued: 'Correo de prueba en camino a %{email}. Pide al usuario que revise su bandeja de entrada y la carpeta de spam.'
+          subject: 'Correo de prueba del soporte de %{brand_name}'

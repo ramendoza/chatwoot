@@ -42,7 +42,9 @@
       "isGreaterThan": "Es mayor que",
       "isLessThan": "Es menor que",
       "daysBefore": "Es X días antes",
-      "startsWith": "Empieza con"
+      "startsWith": "Empieza con",
+      "detects": "Detecta",
+      "does_not_detect": "No detecta"
     },
     "ATTRIBUTE_LABELS": {
       "TRUE": "Verdadero",

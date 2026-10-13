@@ -41,6 +41,12 @@
       "UNASSIGN_TEAM_CONFIRMATION_LABEL": "¿Estás seguro de que quieres desasignar {n} conversación? | ¿Estás seguro de que quieres desasignar las {n} conversaciones?",
       "ASSIGN_SUCCESFUL": "Equipos asignados correctamente.",
       "ASSIGN_FAILED": "Error al asignar equipo, inténtelo de nuevo."
+    },
+    "MACROS": {
+      "EXECUTE_MACRO": "Ejecutar macro",
+      "EXECUTE_CONFIRMATION_LABEL": "¿Seguro que quieres ejecutar {macroName} en {n} conversación? | ¿Seguro que quieres ejecutar {macroName} en {n} conversaciones?",
+      "QUEUED": "Macro en cola para {count} conversación. | Macro en cola para {count} conversaciones.",
+      "QUEUED_WITH_MISSING_ATTRIBUTES": "Macro en cola para {count} conversación. Actualmente le faltan atributos obligatorios y podría seguir abierta. | Macro en cola para {count} conversaciones. Al menos una carece actualmente de atributos obligatorios y podría seguir abierta."
     }
   }
 }

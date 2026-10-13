@@ -3,7 +3,7 @@
     "HEADER": "Conversaciones",
     "LOADING_CHART": "Cargando datos del gráfico...",
     "NO_ENOUGH_DATA": "No hemos recibido suficientes puntos de datos para generar el informe. Inténtalo de nuevo más tarde.",
-    "DOWNLOAD_CONVERSATION_REPORTS": "Download conversation reports",
+    "DOWNLOAD_CONVERSATION_REPORTS": "Descargar reportes de conversaciones",
     "DATA_FETCHING_FAILED": "Error al obtener datos, por favor intente nuevamente.",
     "SUMMARY_FETCHING_FAILED": "No se pudo obtener el resumen, por favor inténtalo de nuevo más tarde.",
     "METRICS": {
@@ -57,8 +57,8 @@
       "LAST_7_DAYS": "Últimos 7 días",
       "LAST_14_DAYS": "Últimos 14 días",
       "LAST_30_DAYS": "Últimos 30 días",
-      "THIS_MONTH": "This month",
-      "LAST_MONTH": "Last month",
+      "THIS_MONTH": "Este mes",
+      "LAST_MONTH": "Mes pasado",
       "LAST_3_MONTHS": "Últimos 3 meses",
       "LAST_6_MONTHS": "Últimos 6 meses",
       "LAST_YEAR": "Último año",
@@ -142,16 +142,17 @@
       "MESSAGE_CREATED_AT": "Mensaje creado a la {time}",
       "EVENT_OCCURRED_AT": "El evento se produjo en {time}",
       "INCOMING_MESSAGE": "Mensaje entrante",
-      "OUTGOING_MESSAGE": "Mensaje saliente"
+      "OUTGOING_MESSAGE": "Mensaje saliente",
+      "VIEW_ALL": "Ver todo"
     },
     "PAGINATION": {
       "RESULTS": "Mostrando {start} a {end} de {total} resultados",
-      "PER_PAGE_TEMPLATE": "{size} / page"
+      "PER_PAGE_TEMPLATE": "{size} / página"
     }
   },
   "AGENT_REPORTS": {
     "HEADER": "Resumen de agentes",
-    "DESCRIPTION": "Easily track agent performance with key metrics such as conversations, response times, resolution times, and resolved cases. Click an agent's name to learn more.",
+    "DESCRIPTION": "Haz seguimiento fácil del rendimiento de los agentes con métricas clave como conversaciones, tiempos de respuesta, tiempos de resolución y casos resueltos. Haz clic en el nombre de un agente para saber más.",
     "LOADING_CHART": "Cargando datos del gráfico...",
     "NO_ENOUGH_DATA": "No hemos recibido suficientes puntos de datos para generar el informe. Inténtalo de nuevo más tarde.",
     "DOWNLOAD_AGENT_REPORTS": "Descargar reportes de agente",
@@ -224,7 +225,7 @@
   },
   "LABEL_REPORTS": {
     "HEADER": "Resumen de etiquetas",
-    "DESCRIPTION": "Track label performance with key metrics including conversations, response times, resolution times, and resolved cases. Click a label name for detailed insights.",
+    "DESCRIPTION": "Haz seguimiento del rendimiento de las etiquetas con métricas clave como conversaciones, tiempos de respuesta, tiempos de resolución y casos resueltos. Haz clic en el nombre de una etiqueta para ver información detallada.",
     "LOADING_CHART": "Cargando datos del gráfico...",
     "NO_ENOUGH_DATA": "No hemos recibido suficientes puntos de datos para generar el informe. Inténtalo de nuevo más tarde.",
     "DOWNLOAD_LABEL_REPORTS": "Descargar reportes de etiquetas",
@@ -297,16 +298,16 @@
   },
   "INBOX_REPORTS": {
     "HEADER": "Resumen de bandeja de entrada",
-    "DESCRIPTION": "Quickly view your inbox performance with key metrics like conversations, response times, resolution times, and resolved cases—all in one place. Click an inbox name for more details.",
+    "DESCRIPTION": "Consulta rápidamente el rendimiento de tu bandeja de entrada con métricas clave como conversaciones, tiempos de respuesta, tiempos de resolución y casos resueltos, todo en un solo lugar. Haz clic en el nombre de una bandeja de entrada para más detalles.",
     "LOADING_CHART": "Cargando datos del gráfico...",
     "NO_ENOUGH_DATA": "No hemos recibido suficientes puntos de datos para generar el informe. Inténtalo de nuevo más tarde.",
     "DOWNLOAD_INBOX_REPORTS": "Descargar reportes de bandeja de entrada",
     "FILTER_DROPDOWN_LABEL": "Seleccione una bandeja de entrada",
-    "ALL_INBOXES": "All Inboxes",
-    "SEARCH_INBOX": "Search Inbox",
+    "ALL_INBOXES": "Todas las bandejas de entrada",
+    "SEARCH_INBOX": "Buscar bandeja de entrada",
     "FILTERS": {
       "INPUT_PLACEHOLDER": {
-        "INBOXES": "Search inboxes"
+        "INBOXES": "Buscar bandejas de entrada"
       }
     },
     "METRICS": {
@@ -372,7 +373,7 @@
   },
   "TEAM_REPORTS": {
     "HEADER": "Vista general del equipo",
-    "DESCRIPTION": "Get a snapshot of your team's performance with essential metrics, including conversations, response times, resolution times, and resolved cases. Click a team name for more details.",
+    "DESCRIPTION": "Obtén una instantánea del rendimiento de tu equipo con métricas esenciales, incluidas conversaciones, tiempos de respuesta, tiempos de resolución y casos resueltos. Haz clic en el nombre de un equipo para más detalles.",
     "LOADING_CHART": "Cargando datos del gráfico...",
     "NO_ENOUGH_DATA": "No hemos recibido suficientes puntos de datos para generar el informe. Inténtalo de nuevo más tarde.",
     "DOWNLOAD_TEAM_REPORTS": "Descargar informes del equipo",
@@ -448,8 +449,8 @@
   },
   "CSAT_REPORTS": {
     "HEADER": "Reporte de encuestas de satisfacción",
-    "NO_RECORDS": "No responses yet",
-    "NO_RECORDS_DESCRIPTION": "CSAT survey responses will appear here once customers start providing feedback.",
+    "NO_RECORDS": "Aún no hay respuestas",
+    "NO_RECORDS_DESCRIPTION": "Las respuestas de las encuestas CSAT aparecerán aquí cuando los clientes empiecen a dar su opinión.",
     "DOWNLOAD": "Descargar reportes CSAT",
     "DOWNLOAD_FAILED": "Error al descargar los informes CSAT",
     "FILTERS": {
@@ -458,9 +459,9 @@
       "NO_FILTER": "No hay filtros disponibles",
       "INPUT_PLACEHOLDER": {
         "AGENTS": "Buscar agentes",
-        "INBOXES": "Search inboxes",
+        "INBOXES": "Buscar bandejas de entrada",
         "TEAMS": "Buscar equipos",
-        "RATINGS": "Search ratings"
+        "RATINGS": "Buscar calificaciones"
       },
       "AGENTS": {
         "LABEL": "Agente"
@@ -482,14 +483,14 @@
         "RATING": "Calificación",
         "FEEDBACK_TEXT": "Realimentacion de Comentario",
         "CONVERSATION": "Conversación",
-        "CUSTOMER": "Customer",
+        "CUSTOMER": "Cliente",
         "RESPONSE": "Respuesta",
-        "HANDLED_BY": "Handled by"
+        "HANDLED_BY": "Atendido por"
       },
-      "UNKNOWN_CUSTOMER": "Unknown customer"
+      "UNKNOWN_CUSTOMER": "Cliente desconocido"
     },
-    "NO_AGENT": "No assigned agent",
-    "NO_FEEDBACK": "No feedback provided",
+    "NO_AGENT": "Sin agente asignado",
+    "NO_FEEDBACK": "Sin comentarios",
     "METRIC": {
       "TOTAL_RESPONSES": {
         "LABEL": "Total de respuestas",
@@ -503,22 +504,22 @@
         "LABEL": "Tasa de respuesta",
         "TOOLTIP": "Número total de respuestas / Número total de mensajes de la encuesta de satisfacción enviados * 100"
       },
-      "RATING_DISTRIBUTION": "Rating distribution"
+      "RATING_DISTRIBUTION": "Distribución de calificaciones"
     },
     "REVIEW_NOTES": {
-      "TITLE": "Review notes",
-      "PLACEHOLDER": "Add review notes about this rating...",
+      "TITLE": "Notas de revisión",
+      "PLACEHOLDER": "Agrega notas de revisión sobre esta calificación...",
       "SAVE": "Guardar",
       "CANCEL": "Cancelar",
       "SAVING": "Guardando...",
-      "SAVED": "Notes saved successfully",
-      "SAVE_ERROR": "Failed to save notes",
-      "UPDATED_BY": "Updated by {name} {time}",
-      "UPDATED_BY_LABEL": "Updated by",
+      "SAVED": "Notas guardadas correctamente",
+      "SAVE_ERROR": "No se pudieron guardar las notas",
+      "UPDATED_BY": "Actualizado por {name} {time}",
+      "UPDATED_BY_LABEL": "Actualizado por",
       "PAYWALL": {
-        "TITLE": "Upgrade to add review notes",
-        "AVAILABLE_ON": "The review notes feature is only available in the Business and Enterprise plans.",
-        "UPGRADE_PROMPT": "Add internal context to every CSAT response with review notes. Capture what really happened, spot patterns faster, and make better decisions from your feedback.",
+        "TITLE": "Mejora tu plan para agregar notas de revisión",
+        "AVAILABLE_ON": "La función de notas de revisión solo está disponible en los planes Business y Enterprise.",
+        "UPGRADE_PROMPT": "Agrega contexto interno a cada respuesta CSAT con notas de revisión. Registra lo que realmente pasó, detecta patrones más rápido y toma mejores decisiones a partir de tus comentarios.",
         "UPGRADE_NOW": "Actualizar ahora",
         "CANCEL_ANYTIME": "Puede cambiar o cancelar su plan en cualquier momento"
       }
@@ -565,7 +566,7 @@
       "DOWNLOAD_REPORT": "Descargar reporte"
     },
     "RESOLUTION_HEATMAP": {
-      "HEADER": "Resolutions",
+      "HEADER": "Resoluciones",
       "NO_CONVERSATIONS": "No hay conversaciones",
       "CONVERSATION": "{count} conversación",
       "CONVERSATIONS": "{count} conversaciones",
@@ -583,10 +584,10 @@
       }
     },
     "TEAM_CONVERSATIONS": {
-      "ALL_TEAMS": "All Teams",
-      "HEADER": "Conversations by teams",
-      "LOADING_MESSAGE": "Loading team metrics...",
-      "NO_TEAMS": "There is no data available",
+      "ALL_TEAMS": "Todos los equipos",
+      "HEADER": "Conversaciones por equipo",
+      "LOADING_MESSAGE": "Cargando métricas de equipos...",
+      "NO_TEAMS": "No hay datos disponibles",
       "TABLE_HEADER": {
         "TEAM": "Equipo",
         "OPEN": "Abrir",
@@ -612,7 +613,7 @@
   },
   "SLA_REPORTS": {
     "HEADER": "Informes de SLA",
-    "NO_RECORDS": "SLA applied conversations are not available.",
+    "NO_RECORDS": "No hay conversaciones con SLA aplicado disponibles.",
     "LOADING": "Cargando datos de SLA...",
     "DOWNLOAD_SLA_REPORTS": "Descargar reportes de SLA",
     "DOWNLOAD_FAILED": "Error al descargar los informes de SLA",
@@ -640,15 +641,15 @@
     "METRICS": {
       "HIT_RATE": {
         "LABEL": "Tasa de Aciertos",
-        "TOOLTIP": "Percentage of SLAs created were completed successfully"
+        "TOOLTIP": "Porcentaje de SLA creados que se cumplieron correctamente"
       },
       "NO_OF_MISSES": {
         "LABEL": "Número de Fallos",
-        "TOOLTIP": "Total SLA misses in a certain period"
+        "TOOLTIP": "Total de incumplimientos de SLA en un período determinado"
       },
       "NO_OF_CONVERSATIONS": {
         "LABEL": "Número de conversaciones",
-        "TOOLTIP": "Total number of conversations with SLA"
+        "TOOLTIP": "Número total de conversaciones con SLA"
       }
     },
     "TABLE": {
@@ -665,10 +666,176 @@
     "AGENT": "Agente",
     "TEAM": "Equipo",
     "LABEL": "Etiqueta",
-    "AVG_RESOLUTION_TIME": "Avg. Resolution Time",
-    "AVG_FIRST_RESPONSE_TIME": "Avg. First Response Time",
-    "AVG_REPLY_TIME": "Avg. Customer Waiting Time",
+    "AVG_RESOLUTION_TIME": "Tiempo medio de resolución",
+    "AVG_FIRST_RESPONSE_TIME": "Tiempo medio de primera respuesta",
+    "AVG_REPLY_TIME": "Tiempo medio de espera del cliente",
     "RESOLUTION_COUNT": "Número de resoluciones",
     "CONVERSATIONS": "Núm. de conversaciones"
+  },
+  "MONITORS": {
+    "TITLE": "Monitores",
+    "AUTOMATIONS": {
+      "TITLE": "Automatizaciones",
+      "DESCRIPTION": "Ejecuta acciones cuando este monitor coincide por primera vez con una conversación a partir de actividad en vivo nueva.",
+      "CREATE": "Crear automatización",
+      "EMPTY": "Aún no hay automatizaciones vinculadas a este monitor.",
+      "ACTIVE": "Activa",
+      "DISABLED": "Desactivada",
+      "FETCH_FAILED": "No se pudieron cargar las automatizaciones vinculadas."
+    },
+    "LIST": {
+      "CONVERSATIONS_COUNT": "{count} conversación | {count} conversaciones",
+      "CONVERSATIONS_HELP": "Número de conversaciones que coinciden con este monitor en los últimos 7 días.",
+      "RUNNING": "En ejecución",
+      "FETCH_FAILED": "No se pudieron cargar los monitores. Inténtalo de nuevo.",
+      "PAGINATION": "Mostrando {startItem} – {endItem} de {totalItems} monitor | Mostrando {startItem} – {endItem} de {totalItems} monitores"
+    },
+    "DESCRIPTION": "Sigue los temas que importan en las conversaciones con tus clientes. Describe un tema en lenguaje sencillo y un monitor graficará las conversaciones coincidentes a medida que lleguen nuevos mensajes de clientes.",
+    "CREATE": "Crear monitor",
+    "PREVIEW": "Previsualizar coincidencias",
+    "PREVIEW_COOLDOWN": "Podrás previsualizar de nuevo en {count} segundo. | Podrás previsualizar de nuevo en {count} segundos.",
+    "PREVIEW_FAILED": "No se pudieron previsualizar las coincidencias. Inténtalo de nuevo.",
+    "PREVIEW_HELP": "{count} coincidencia en una muestra de {sampled} conversaciones recientes ({excluded} sin contexto utilizable). Esta muestra no representa un análisis completo. | {count} coincidencias en una muestra de {sampled} conversaciones recientes ({excluded} sin contexto utilizable). Esta muestra no representa un análisis completo.",
+    "NAME": "Nombre",
+    "NAME_PLACEHOLDER": "Conversaciones de reembolsos",
+    "CHOOSE_ICON": "Elegir ícono o emoji",
+    "CONDITION": "¿Qué conversaciones debe encontrar este monitor?",
+    "CONDITION_PLACEHOLDER": "Todas las conversaciones que mencionan reembolsos",
+    "CREATE_HELP": "Revisaremos las conversaciones creadas en los últimos siete días y luego seguiremos revisando los nuevos mensajes de clientes. Las respuestas públicas y los atributos de cliente configurados aportan contexto. Las notas privadas se excluyen.",
+    "SECTIONS": {
+      "YOUR_MONITORS": "Tus monitores",
+      "TEMPLATES": "Plantillas"
+    },
+    "TEMPLATES": {
+      "TITLE": "Comienza con una plantilla",
+      "USE_NAMED": "Usar la plantilla {name}",
+      "EDIT_HINT": "De la plantilla {name}. Edita lo que quieras antes de crear.",
+      "ADMIN_HELP": "Pide a un administrador que cree un monitor a partir de una plantilla.",
+      "LOGIN_PROBLEMS": {
+        "NAME": "Problemas de inicio de sesión",
+        "AUDIENCE": "Para equipos de soporte",
+        "SUMMARY": "Detecta cuándo empiezan a aumentar las quejas de inicio de sesión.",
+        "CONDITION": "Un cliente dice que no puede iniciar sesión en su cuenta, incluidos restablecimientos de contraseña fallidos y códigos de verificación que nunca llegan. Excluye preguntas sobre cambiar la contraseña con la sesión ya iniciada."
+      },
+      "MISSING_ORDER_UPDATES": {
+        "NAME": "Actualizaciones de pedidos que no llegan",
+        "AUDIENCE": "Para equipos de operaciones",
+        "SUMMARY": "Haz seguimiento de problemas recurrentes de comunicación de entregas.",
+        "CONDITION": "Un cliente dice que no llegó una confirmación de pedido, una actualización de envío o un aviso de entrega, o que llegó para el pedido equivocado. Excluye a los clientes que preguntan dónde está un paquete cuando sí recibieron el correo de seguimiento."
+      },
+      "COMPETITOR_MENTIONS": {
+        "NAME": "Menciones de competidores",
+        "AUDIENCE": "Para fundadores y equipos de ventas",
+        "SUMMARY": "Encuentra conversaciones que vale la pena retomar.",
+        "CONDITION": "Un cliente nos compara con un producto de la competencia, dice que está evaluando uno o menciona que podría cambiarse. Excluye a los clientes que se pasaron a nosotros desde un competidor y preguntan cómo importar sus datos."
+      },
+      "FEATURE_REQUESTS": {
+        "NAME": "Solicitudes de funciones",
+        "AUDIENCE": "Para equipos de producto",
+        "SUMMARY": "Mantén un conteo continuo de conversaciones sobre necesidades no cubiertas.",
+        "CONDITION": "Un cliente pide una capacidad que el producto no ofrece actualmente, o pregunta si algo es posible y no lo es. Excluye preguntas sobre cómo usar una función que ya existe."
+      },
+      "REFUND_REQUESTS": {
+        "NAME": "Solicitudes de reembolso",
+        "AUDIENCE": "Para equipos de finanzas",
+        "SUMMARY": "Aporta una definición consistente a tu conteo semanal de solicitudes de reembolso.",
+        "CONDITION": "Un cliente pide que le devuelvan el dinero de un pago ya realizado, incluidos cargos duplicados y reembolsos tras cancelar. Excluye preguntas sobre la política de reembolsos y solicitudes de descuento."
+      },
+      "CANCELLATION_INTENT": {
+        "NAME": "Intención de cancelación",
+        "AUDIENCE": "Para gestores de cuentas",
+        "SUMMARY": "Encuentra clientes que podrían necesitar una conversación antes de irse.",
+        "CONDITION": "Un cliente dice que tiene intención de cancelar, que no renovará o que planea dejar de usar el producto. Excluye solicitudes de reducir licencias o cambiar a un plan inferior, y cancelaciones que el cliente retira en la misma conversación."
+      },
+      "PAYMENT_FAILURES": {
+        "NAME": "Fallos de pago",
+        "AUDIENCE": "Para equipos de facturación y soporte",
+        "SUMMARY": "Detecta clientes que no pueden pagar.",
+        "CONDITION": "Un cliente dice que falló un pago, el proceso de compra o el pago de una factura, o que su tarjeta fue rechazada. Excluye solicitudes de reembolso, disputas sobre cargos completados y preguntas generales sobre métodos de pago."
+      },
+      "PRODUCT_ERRORS": {
+        "NAME": "Errores del producto",
+        "AUDIENCE": "Para equipos de soporte e ingeniería",
+        "SUMMARY": "Detecta cuándo los errores y las caídas empiezan a extenderse.",
+        "CONDITION": "Un cliente informa de un error, una caída, un servicio no disponible o una lentitud severa que le impide completar una tarea. Excluye problemas de inicio de sesión y preguntas sobre cómo usar una función que funciona."
+      },
+      "ISSUE_STILL_UNRESOLVED": {
+        "NAME": "Problema aún sin resolver",
+        "AUDIENCE": "Para líderes de soporte",
+        "SUMMARY": "Encuentra conversaciones que necesitan otra revisión.",
+        "CONDITION": "Un cliente dice que una solución sugerida no funcionó, que el mismo problema volvió o que su problema persiste después de que soporte dijera que estaba resuelto. Excluye primeros reportes y solicitudes que solo piden una actualización de estado."
+      },
+      "ESCALATION_REQUESTS": {
+        "NAME": "Solicitudes de escalamiento",
+        "AUDIENCE": "Para líderes de soporte",
+        "SUMMARY": "Destaca solicitudes que necesitan atención inmediata.",
+        "CONDITION": "Un cliente pide explícitamente un agente humano, un gerente, un especialista o un nivel de soporte superior porque su problema no se ha resuelto. Excluye transferencias de rutina y solicitudes de ventas."
+      }
+    },
+    "MATCHING_CONVERSATIONS": "Conversaciones coincidentes creadas",
+    "LAST_DAYS": "Último {count} día | Últimos {count} días",
+    "LAST_DAYS_BEFORE_PAUSE": "{count} día antes de la pausa | {count} días antes de la pausa",
+    "GROUP_BY": "Agrupar por {interval}",
+    "INTERVALS": {
+      "HOUR": "1 hora",
+      "SIX_HOURS": "6 horas",
+      "DAY": "1 día"
+    },
+    "EDIT": "Editar",
+    "UPDATE": "Actualizar",
+    "MONITOR_DESCRIPTION": "Descripción",
+    "EDIT_HELP": "La descripción define qué conversaciones coinciden. Cambiarla borra las coincidencias existentes y vuelve a revisar las conversaciones revisadas anteriormente. Los períodos omitidos siguen omitidos. Si está en pausa, la nueva revisión comienza al reanudar.",
+    "DUPLICATE": "Duplicar",
+    "PAUSE": "Pausar",
+    "RESUME": "Reanudar",
+    "RESUME_HELP": "Elige desde dónde debe continuar este monitor. Los resultados existentes seguirán disponibles.",
+    "RESUME_CATCH_UP": "Revisar el período en pausa",
+    "RESUME_CATCH_UP_HELP": "Revisa las conversaciones creadas y los mensajes de clientes recibidos desde que el monitor se pausó hasta ahora, y luego continúa con las actualizaciones en vivo.",
+    "RESUME_FROM_NOW": "Empezar desde ahora",
+    "RESUME_FROM_NOW_HELP": "Solo revisa los mensajes y conversaciones nuevos de clientes a partir de ahora. No analiza el período en pausa.",
+    "DELETE": "Eliminar",
+    "DELETE_HELP": "¿Eliminar este monitor y sus resultados? Esto no elimina las conversaciones.",
+    "PAUSE_HELP": "¿Pausar este monitor? Sus resultados seguirán disponibles y dejará de revisar mensajes y conversaciones.",
+    "PAUSED_HELP": "En pausa desde {time}. Los resultados históricos siguen disponibles. No se están revisando los mensajes ni las conversaciones nuevos.",
+    "COLLECTED_UNTIL": "Resultados recopilados hasta {time}.",
+    "RETRY": "Reintentar",
+    "RESULTS_UPDATED": "Hay nuevos resultados disponibles. El gráfico se ha actualizado; selecciona una barra para ver sus conversaciones actualizadas.",
+    "TIME_BASIS_HELP": "Cada conversación cuenta una sola vez, en la fecha en que se creó. Una nueva coincidencia puede actualizar una barra anterior.",
+    "COVERAGE_HELP": "Este rango incluye períodos que no se revisaron por completo. Los conteos pueden estar incompletos.",
+    "REFRESHED": "Última actualización a las {time}. Las actualizaciones aparecen automáticamente.",
+    "USAGE": {
+      "LIMIT_REACHED": "Esta cuenta ha usado sus {limit} llamadas de monitor de este mes.",
+      "RESETS": "Las nuevas evaluaciones y previsualizaciones están en espera hasta {time}. Los resultados existentes siguen disponibles.",
+      "REACHED_AT": "Límite alcanzado el {time}."
+    },
+    "STATES": {
+      "SCANNING": "Revisando conversaciones recientes",
+      "PROCESSING": "Revisando conversaciones",
+      "RECHECKING": "Revisando de nuevo las conversaciones con la descripción actualizada",
+      "LIVE": "Al día",
+      "DELAYED": "Las actualizaciones están retrasadas",
+      "NEEDS_ATTENTION": "Requiere atención",
+      "PAUSED": "En pausa",
+      "CATCHING_UP": "Revisando el período en pausa"
+    },
+    "ERRORS": {
+      "FETCH_FAILED": "No se pudo cargar este monitor. Actualiza para intentarlo de nuevo.",
+      "SAVE_FAILED": "No se pudo guardar el monitor. Revisa el nombre y la condición e inténtalo de nuevo.",
+      "NOT_CONFIGURED": "Configura la conexión con OpenRouter y luego haz clic en Reintentar.",
+      "CREDENTIALS_INVALID": "La conexión con OpenRouter requiere atención. Pide al administrador de tu instalación que revise sus credenciales.",
+      "PROVIDER_CREDITS_EXHAUSTED": "La cuenta de OpenRouter no tiene créditos suficientes. Pide al administrador de tu instalación que revise su saldo y luego reintenta.",
+      "INVALID_REQUEST": "La solicitud de evaluación requiere atención. Contacta al administrador de tu instalación.",
+      "INVALID_RESPONSE": "El proveedor de evaluación devolvió un resultado incompleto. Las conversaciones afectadas no se han contado.",
+      "PROVIDER_BUSY": "El proveedor de evaluación está ocupado. Las conversaciones pendientes necesitan otra evaluación.",
+      "PROVIDER_UNAVAILABLE": "El proveedor de evaluación no está disponible temporalmente. Las actualizaciones pueden retrasarse.",
+      "BUDGET_LIMIT": "Se alcanzó el límite diario de evaluaciones. El trabajo pendiente se reanudará cuando se restablezca.",
+      "MONTHLY_LIMIT": "Esta cuenta alcanzó su límite mensual de monitores. Las evaluaciones pendientes se reanudarán el próximo mes.",
+      "CONTEXT_LIMIT": "Algunas conversaciones son demasiado largas para evaluarse por completo. Se excluyen de los resultados.",
+      "INVALID_PARAMETERS": "Revisa el nombre, la condición, el rango de fechas y el intervalo.",
+      "TOO_MANY_BUCKETS": "Elige un rango de fechas más corto o un intervalo mayor. Un gráfico puede mostrar hasta 744 barras.",
+      "MONITOR_LIMIT": "Esta cuenta alcanzó su límite de monitores activos. Pausa un monitor antes de crear otro.",
+      "MONITOR_PAUSED": "Este monitor está en pausa y ya no revisa conversaciones.",
+      "MONITOR_CHANGED": "Este monitor cambió en otra sesión. Su estado actual se ha actualizado. Inténtalo de nuevo."
+    }
   }
 }
