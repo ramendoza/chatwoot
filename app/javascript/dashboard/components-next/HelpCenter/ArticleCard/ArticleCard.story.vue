@@ -4,7 +4,7 @@ import ArticleCard from './ArticleCard.vue';
 const articles = [
   {
     id: 1,
-    title: "How to get an SSL certificate for your Help Center's custom domain",
+    title: 'Cómo obtener un certificado SSL para el dominio personalizado de tu Centro de Ayuda',
     status: 'draft',
     updatedAt: 1729048936,
     author: {
@@ -20,7 +20,7 @@ const articles = [
   },
   {
     id: 2,
-    title: 'Setting up your first Help Center portal',
+    title: 'Configura tu primer portal del Centro de Ayuda',
     status: '',
     updatedAt: 1729048936,
     author: {
@@ -28,7 +28,7 @@ const articles = [
       thumbnail: 'https://i.pravatar.cc/300',
     },
     category: {
-      title: 'Development',
+      title: 'Desarrollo',
       slug: 'development',
       icon: '🛠️',
     },
@@ -36,7 +36,7 @@ const articles = [
   },
   {
     id: 3,
-    title: 'Best practices for organizing your Help Center content',
+    title: 'Buenas prácticas para organizar el contenido de tu Centro de Ayuda',
     status: 'archived',
     updatedAt: 1729048936,
     author: {
@@ -44,7 +44,7 @@ const articles = [
       thumbnail: 'https://i.pravatar.cc/300',
     },
     category: {
-      title: 'Finance',
+      title: 'Finanzas',
       slug: 'finance',
       icon: '💰',
     },

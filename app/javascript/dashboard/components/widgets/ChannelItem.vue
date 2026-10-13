@@ -114,6 +114,7 @@ const onItemClick = () => {
 
 <template>
   <ChannelSelector
+    v-if="isActive || canRequestTiktokAccess"
     :title="channel.title"
     :description="channel.description"
     :icon="channel.icon"

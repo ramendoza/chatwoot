@@ -1,6 +1,6 @@
 import { FEATURE_FLAGS } from '../../../../featureFlags';
 import { frontendURL } from '../../../../helper/URLHelper';
-import ChannelFactory from './ChannelFactory.vue';
+import ChannelFactory, { isChannelAvailable } from './ChannelFactory.vue';
 
 import SettingsContent from '../Wrapper.vue';
 import SettingsWrapper from '../SettingsWrapper.vue';
@@ -74,6 +74,13 @@ export default {
               path: ':sub_page',
               name: 'settings_inboxes_page_channel',
               component: ChannelFactory,
+              beforeEnter: to =>
+                isChannelAvailable(to.params.sub_page)
+                  ? true
+                  : {
+                      name: 'settings_inbox_new',
+                      params: { accountId: to.params.accountId },
+                    },
               meta: {
                 featureFlag: FEATURE_FLAGS.INBOX_MANAGEMENT,
                 permissions: ['administrator'],

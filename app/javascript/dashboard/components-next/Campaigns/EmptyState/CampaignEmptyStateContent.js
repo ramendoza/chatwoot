@@ -1,18 +1,18 @@
 export const ONGOING_CAMPAIGN_EMPTY_STATE_CONTENT = [
   {
     id: 1,
-    title: 'Chatbot Assistance',
+    title: 'Asistencia ZiGuf',
     inbox: {
       id: 2,
-      name: 'PaperLayer Website',
+      name: 'Z17',
       channel_type: 'Channel::WebWidget',
       phone_number: '',
     },
     sender: {
       id: 1,
-      name: 'Alexa Rivera',
+      name: 'Javier Mendoza',
     },
-    message: 'Hello! 👋 Need help with our chatbot features? Feel free to ask!',
+    message: 'Hola! 👋 Necesitas ayuda con nustras funcionalidadaes? Preguntar es gratis!',
     campaign_status: 'active',
     enabled: true,
     campaign_type: 'ongoing',
@@ -26,18 +26,18 @@ export const ONGOING_CAMPAIGN_EMPTY_STATE_CONTENT = [
   },
   {
     id: 2,
-    title: 'Pricing Information Support',
+    title: 'Informacion de nuestros precios',
     inbox: {
       id: 2,
-      name: 'PaperLayer Website',
+      name: 'Z17',
       channel_type: 'Channel::WebWidget',
       phone_number: '',
     },
     sender: {
       id: 1,
-      name: 'Jamie Lee',
+      name: 'María Castro',
     },
-    message: 'Hello! 👋 Any questions on pricing? I’m here to help!',
+    message: 'Hola! 👋 Alguna duda con nuestros precios? Estoy para ayudarte!',
     campaign_status: 'active',
     enabled: false,
     campaign_type: 'ongoing',
@@ -48,58 +48,7 @@ export const ONGOING_CAMPAIGN_EMPTY_STATE_CONTENT = [
     trigger_only_during_business_hours: false,
     created_at: '2024-10-24T13:11:08.763Z',
     updated_at: '2024-10-24T13:11:08.763Z',
-  },
-  {
-    id: 3,
-    title: 'Product Setup Assistance',
-    inbox: {
-      id: 2,
-      name: 'PaperLayer Website',
-      channel_type: 'Channel::WebWidget',
-      phone_number: '',
-    },
-    sender: {
-      id: 1,
-      name: 'Chatwoot',
-    },
-    message: 'Hi! Chatwoot here. Need help setting up? Let me know!',
-    campaign_status: 'active',
-    enabled: false,
-    campaign_type: 'ongoing',
-    trigger_rules: {
-      url: 'https://{*.}?chatwoot.com/apps/account/*/settings/inboxes/new/',
-      time_on_page: 10,
-    },
-    trigger_only_during_business_hours: false,
-    created_at: '2024-10-24T13:11:44.285Z',
-    updated_at: '2024-10-24T13:11:44.285Z',
-  },
-  {
-    id: 4,
-    title: 'General Assistance Campaign',
-    inbox: {
-      id: 2,
-      name: 'PaperLayer Website',
-      channel_type: 'Channel::WebWidget',
-      phone_number: '',
-    },
-    sender: {
-      id: 1,
-      name: 'Chris Barlow',
-    },
-    message:
-      'Hi there! 👋 I’m here for any questions you may have. Let’s chat!',
-    campaign_status: 'active',
-    enabled: true,
-    campaign_type: 'ongoing',
-    trigger_rules: {
-      url: 'https://siv.com',
-      time_on_page: 200,
-    },
-    trigger_only_during_business_hours: false,
-    created_at: '2024-10-29T19:54:33.741Z',
-    updated_at: '2024-10-29T19:56:26.296Z',
-  },
+  }
 ];
 
 export const ONE_OFF_CAMPAIGN_EMPTY_STATE_CONTENT = [

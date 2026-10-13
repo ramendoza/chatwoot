@@ -1,34 +1,37 @@
 <script>
 import { defineComponent, h } from 'vue';
-import Facebook from './channels/Facebook.vue';
+// import Facebook from './channels/Facebook.vue';
 import Website from './channels/Website.vue';
-import Twitter from './channels/Twitter.vue';
+// import Twitter from './channels/Twitter.vue';
 import Api from './channels/Api.vue';
 import Email from './channels/Email.vue';
 import Sms from './channels/Sms.vue';
-import Whatsapp from './channels/Whatsapp.vue';
-import WhatsappCall from './channels/WhatsappCall.vue';
-import Line from './channels/Line.vue';
+// import Whatsapp from './channels/Whatsapp.vue';
+// import WhatsappCall from './channels/WhatsappCall.vue';
+// import Line from './channels/Line.vue';
 import Telegram from './channels/Telegram.vue';
-import Instagram from './channels/Instagram.vue';
-import Tiktok from './channels/Tiktok.vue';
-import Voice from './channels/Voice.vue';
+// import Instagram from './channels/Instagram.vue';
+// import Tiktok from './channels/Tiktok.vue';
+// import Voice from './channels/Voice.vue';
 
 const channelViewList = {
-  facebook: Facebook,
+  // facebook: Facebook,
   website: Website,
-  twitter: Twitter,
+  // twitter: Twitter,
   api: Api,
   email: Email,
   sms: Sms,
-  whatsapp: Whatsapp,
-  whatsapp_call: WhatsappCall,
-  line: Line,
+  // whatsapp: Whatsapp,
+  // whatsapp_call: WhatsappCall,
+  // line: Line,
   telegram: Telegram,
-  instagram: Instagram,
-  tiktok: Tiktok,
-  voice: Voice,
+  // instagram: Instagram,
+  // tiktok: Tiktok,
+  // voice: Voice,
 };
+
+export const isChannelAvailable = channelName =>
+  Object.prototype.hasOwnProperty.call(channelViewList, channelName);
 
 export default defineComponent({
   name: 'NewChannelView',
