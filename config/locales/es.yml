@@ -1,17 +1,5 @@
 #Files in the config/locales directory are used for internationalization
-      Transcripción de conversación de %{brand_name}
-
-      Canal: %{channel_info}
-      ID de conversación: %{display_id}
-      Ver en %{brand_name}: %{url}
-
-      Transcripción:
-      %{format_messages}
-
-      Canal: %{channel_info}
-      Creada: %{formatted_creation_time}
-      ID de conversación: %{display_id}
-      Ver en %{brand_name}: %{url}
+#and are automatically loaded by Rails. If you want to use locales other
 #than English, add the necessary files in this directory.
 #To use the locales, use `I18n.t`:
 #I18n.t 'hello'
