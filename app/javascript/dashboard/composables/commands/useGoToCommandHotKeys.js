@@ -8,7 +8,6 @@ import {
   // ICON_BOT,
   ICON_BRIEFCASE,
   ICON_CHART,
-  ICON_CLOCK_ALERT,
   ICON_CODE,
   ICON_CONTACT,
   ICON_CREDIT_CARD,
@@ -211,13 +210,6 @@ const GO_TO_COMMANDS = [
     section: SECTION_SETTINGS,
     icon: ICON_MESSAGE_QUOTE,
     routeName: 'canned_list',
-  },
-  {
-    id: 'open_sla_settings',
-    title: 'COMMAND_BAR.COMMANDS.GO_TO_SETTINGS_SLA',
-    section: SECTION_SETTINGS,
-    icon: ICON_CLOCK_ALERT,
-    routeName: 'sla_list',
   },
   {
     id: 'open_applications_settings',

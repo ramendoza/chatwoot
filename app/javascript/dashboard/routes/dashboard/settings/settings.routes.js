@@ -20,9 +20,7 @@ import labels from './labels/labels.routes';
 import macros from './macros/macros.routes';
 import reports from './reports/reports.routes';
 import store from '../../../store';
-import sla from './sla/sla.routes';
 import teams from './teams/teams.routes';
-import customRoles from './customRoles/customRole.routes';
 import profile from './profile/profile.routes';
 import security from './security/security.routes';
 import conversationWorkflow from './conversationWorkflow/conversationWorkflow.routes';
@@ -64,9 +62,7 @@ export default {
     ...labels.routes,
     ...macros.routes,
     ...reports.routes,
-    ...sla.routes,
     ...teams.routes,
-    ...customRoles.routes,
     ...profile.routes,
     ...security.routes,
     ...conversationWorkflow.routes,
